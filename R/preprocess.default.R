@@ -2,7 +2,7 @@
 # ::rtemis::
 # 2017-8 Efstathios D. Gennatas egenn.github.io
 
-#' \code{preprocess.default} Data preprocessing for \code{data.frame}
+#' `preprocess.default` Data preprocessing for `data.frame`
 #'
 #' @rdname preprocess
 #' @export

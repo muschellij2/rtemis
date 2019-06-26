@@ -5,36 +5,36 @@
 #' Resampling methods
 #'
 #' Create resamples of your data, e.g. for model tuning or testing
-#' "bootstrap" gives the standard bootstrap, i.e. random sampling with replacement, using \code{caret::createResample},
-#' "strat.sub" creates stratified subsamples using \code{caret::createDataPartition}, while "strat.boot"
-#' runs \code{caret::createDataPartition} and then randomly replicates some of the training cases to reach original
-#' length of input (default) or length defined by \code{target.length}.
+#' "bootstrap" gives the standard bootstrap, i.e. random sampling with replacement, using `caret::createResample`,
+#' "strat.sub" creates stratified subsamples using `caret::createDataPartition`, while "strat.boot"
+#' runs `caret::createDataPartition` and then randomly replicates some of the training cases to reach original
+#' length of input (default) or length defined by `target.length`.
 #'
-#' \code{resample} is used by multiple \pkg{rtemis} learners and functions. Note that option 'kfold', which uses \code{caret::createFolds} results in resamples of slightly
+#' `resample` is used by multiple \pkg{rtemis} learners and functions. Note that option 'kfold', which uses `caret::createFolds` results in resamples of slightly
 #'   different length for y of small length, so avoid all operations which rely on equal-length vectors.
 #'   For example, you can't place resamples in a data.frame, but must use a list instead.
 #'
-#' @param y Numeric vector. Usually the outcome; \code{length(y)} defines sample size
+#' @param y Numeric vector. Usually the outcome; `length(y)` defines sample size
 #' @param n.resamples Integer: Number of training/testing sets required
 #' @param resampler String: Type of resampling to perform: "bootstrap", "kfold", "strat.boot", "strat.sub".
-#'   Default = "strat.boot" for \code{length(y) < 200}, otherwise "strat.sub"
+#'   Default = "strat.boot" for `length(y) < 200`, otherwise "strat.sub"
 #' @param index List where each element is a vector of training set indices. Use this for manual or precalculated
 #' train/test splits
-#' @param group Integer, vector, length = \code{length(y)}: Integer vector, where numbers define fold membership.
-#' e.g. for 10-fold on a dataset with 1000 cases, you could use \code{group = rep(1:10, each = 100)}
-#' @param stratify.var Numeric vector (optional): Variable used for stratification. Defaults to \code{y}
-#' @param cv.p Float (0, 1): Fraction of cases to assign to traininig set for \code{resampler = "strat.sub"}
+#' @param group Integer, vector, length = `length(y)`: Integer vector, where numbers define fold membership.
+#' e.g. for 10-fold on a dataset with 1000 cases, you could use `group = rep(1:10, each = 100)`
+#' @param stratify.var Numeric vector (optional): Variable used for stratification. Defaults to `y`
+#' @param cv.p Float (0, 1): Fraction of cases to assign to traininig set for `resampler = "strat.sub"`
 #' @param cv.groups Integer: Number of groups to use for stratification for
-#'   \code{resampler = "strat.sub" / "strat.boot"}
-#' @param target.length Integer: Number of cases for training set for \code{resampler = "strat.boot"}.
-#'   Default = \code{length(y)}
-#' @param rtset List: Output of an \link{rtset.resample} (or named list with same structure).
+#'   `resampler = "strat.sub" / "strat.boot"`
+#' @param target.length Integer: Number of cases for training set for `resampler = "strat.boot"`.
+#'   Default = `length(y)`
+#' @param rtset List: Output of an [rtset.resample] (or named list with same structure).
 #' NOTE: Overrides all other arguments. Default = NULL
 #' @param seed Integer: (Optional) Set seed for random number generator, in order to make output reproducible.
-#'   See \code{?base::set.seed}
+#'   See `?base::set.seed`
 #' @param verbose Logical: If TRUE, print messages to screen
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate}
+#' @seealso [elevate]
 #' @export
 
 resample <- function(y = NULL, n.resamples = 10,
@@ -209,11 +209,11 @@ resample <- function(y = NULL, n.resamples = 10,
 } # rtemis::resample
 
 
-#' \code{plot} method for \code{resample} object
+#' `plot` method for `resample` object
 #'
 #' @method plot resample
 #' @param x Vector; numeric or factor: Outcome used for resampling
-#' @param res \link{resample} object
+#' @param res [resample] object
 #' @param col Vector, color
 #' @author Efstathios D. Gennatas
 #' @export
@@ -225,12 +225,12 @@ plot.resample <- function(x, res, col = NULL, ...) {
 } # rtemis::plot.resample
 
 
-#' \code{print} method for \link{resample} object
+#' `print` method for [resample] object
 #'
 #' Print resample information
 #'
 #' @method print resample
-#' @param x \link{resample} object
+#' @param x [resample] object
 #' @param ... Unused
 #' @author Efstathios D. Gennatas
 #' @export

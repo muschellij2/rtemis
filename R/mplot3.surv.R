@@ -2,17 +2,17 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3}: Survival Plots
+#' `mplot3`: Survival Plots
 #' 
-#' Plots survival step functions using \link{mplot3.xy}
+#' Plots survival step functions using [mplot3.xy]
 #' 
 #' @inheritParams mplot3.xy
-#' @param x Survival object / list of Survival objects created using \code{survival::Surv}
-#' @param lty Integer: Line type. Default = 1. See \code{par("lty")}
+#' @param x Survival object / list of Survival objects created using `survival::Surv`
+#' @param lty Integer: Line type. Default = 1. See `par("lty")`
 #' @param lwd Float: Line width. Default = 2
 #' @param alpha Float: Alpha for lines. Default = 1
-#' @param normalize Logical: If TRUE: \link{drange} \code{x} to 0:100
-#' @param ... Additional arguments to pass to \link{mplot3.xy}
+#' @param normalize Logical: If TRUE: [drange] `x` to 0:100
+#' @param ... Additional arguments to pass to [mplot3.xy]
 #' @author Efstathios D. Gennatas
 #' @export
 

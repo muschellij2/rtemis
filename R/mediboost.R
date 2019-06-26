@@ -15,7 +15,7 @@
 #' @param catPredictors Optional: Logical vector indicating categorical features
 #' @param depthLimit Integer: Maximum depth of tree to grow
 #' @param learningRate learning rate for the Newton Raphson step that updates the
-#' function values of the node for \code{update = "exponential"}
+#' function values of the node for `update = "exponential"`
 #' @param gamma Float (0, 1): Accelaration factor
 #' @param update String: "Exponential" or "Polynomial"
 #' @param verbose Logical: If TRUE, print messages to output
@@ -589,7 +589,7 @@ likelihoodMediboostChooseFeat <- function(x, y,
 #'
 #' Obtains predictions from a trained MediBoost model
 #'
-#' @param object A trained model of class \code{"mediboost"}
+#' @param object A trained model of class `"mediboost"`
 #' @param newdata Optional: a matrix / data.frame of features with which to predict
 #' @param verbose Logical: If TRUE, print messages to output
 #' @param ... Not used
@@ -644,11 +644,11 @@ predict.addtree <- function(object, newdata, verbose = FALSE, ...) {
 } # rtemis::predict.addtree
 
 
-#' \code{rtemis-internal} Traverse ADDTREE tree by preorder
+#' `rtemis-internal` Traverse ADDTREE tree by preorder
 #'
 #' Recursively Traverses ADDTREE tree by preorder function and builds data frame representation
 #'
-#' @param rt rt Object from \link{s.ADDTREE}
+#' @param rt rt Object from [s.ADDTREE]
 #' @param x Features
 #' @param verbose Logical: If TRUE, print messages to stdout
 #'
@@ -726,9 +726,9 @@ addtree_path_to_rules <- function(x) {
 } # rtemis::addtree_path_to_rules
 
 
-#' Print method for \code{addtree} object created using \link{s.ADDTREE}
+#' Print method for `addtree` object created using [s.ADDTREE]
 #'
-#' @param x \code{rtMod} object created using \link{s.ADDTREE}
+#' @param x `rtMod` object created using [s.ADDTREE]
 #' @author Efstathios D. Gennatas
 #' @export
 

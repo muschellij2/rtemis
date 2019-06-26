@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.MLRF.R
 \name{s.MLRF}
 \alias{s.MLRF}
-\title{Spark MLlib Random Forest [C, R]}
+\title{Spark MLlib Random Forest \link{C, R}}
 \usage{
 s.MLRF(x, y = NULL, x.test = NULL, y.test = NULL, upsample = FALSE,
   upsample.seed = NULL, n.trees = 500, max.depth = 30L,

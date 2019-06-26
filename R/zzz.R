@@ -32,24 +32,24 @@ rtHome = getOption("rt.home", Sys.getenv("HOME"))
 #'    future::availableCores(). In shared systems, you should limit this as appropriate.}
 #' }
 #' @section Visualization:
-#' Static graphics are handled using the \code{mplot3} family.
-#' Dynamic graphics are handled using the \code{dplot3} family.
+#' Static graphics are handled using the `mplot3` family.
+#' Dynamic graphics are handled using the `dplot3` family.
 #' @section Supervised Learning:
-#' Functions for Regression and Classification begin with \code{s.*}.
-#' Run \link{modSelect} to get a list of available algorithms
+#' Functions for Regression and Classification begin with `s.*`.
+#' Run [modSelect] to get a list of available algorithms
 #' The documentation of each supervised learning function indicates in brackets, after the title
-#' whether the function supports classification, regression, and survival analysis \code{[C, R, S]}
+#' whether the function supports classification, regression, and survival analysis `[C, R, S]`
 #' @section Clustering:
-#' Functions for Clustering begin with \code{u.*}.
-#' Run \link{clustSelect} to get a list of available algorithms
+#' Functions for Clustering begin with `u.*`.
+#' Run [clustSelect] to get a list of available algorithms
 #' @section Decomposition:
-#' Functions for Decomposition and Dimensionality reduction begin with \code{d.*}.
-#' Run \link{decomSelect} to get a list of available algorithms
+#' Functions for Decomposition and Dimensionality reduction begin with `d.*`.
+#' Run [decomSelect] to get a list of available algorithms
 #' @section Cross-Decomposition:
-#' Functions for Cross-Decomposition begin with \code{x.*}.
-#' Run \link{xdecomSelect} to get a list of available algorithms
+#' Functions for Cross-Decomposition begin with `x.*`.
+#' Run [xdecomSelect] to get a list of available algorithms
 #' @section Meta-Modeling:
-#' Meta models are trained using \code{meta*} functions.
+#' Meta models are trained using `meta*` functions.
 #'
 #' @section Notes:
 #' Function documentation includes input type (e.g. "String", "Integer", "Float", etc) and

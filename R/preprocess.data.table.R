@@ -2,7 +2,7 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{preprocess.data.table} Data preprocessing optimized for \code{data.table}
+#' `preprocess.data.table` Data preprocessing optimized for `data.table`
 #'
 #' @rdname preprocess
 #' @export

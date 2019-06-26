@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.XGB.R
 \name{s.XGB}
 \alias{s.XGB}
-\title{XGboost Classification and Regression [C, R]}
+\title{XGboost Classification and Regression \link{C, R}}
 \usage{
 s.XGB(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, booster = c("gbtree", "gblinear", "dart"),
@@ -82,25 +82,25 @@ Default = NULL (random seed)}
 \item{early.stopping.rounds}{Integer: Training on resamples of \code{x.train} (tuning) will stop if performance
 does not improve for this many rounds}
 
-\item{eta}{[gS] Float (0, 1): Learning rate. Default = .1}
+\item{eta}{\link{gS} Float (0, 1): Learning rate. Default = .1}
 
-\item{gamma}{[gS] Float: Minimum loss reduction required to make further partition}
+\item{gamma}{\link{gS} Float: Minimum loss reduction required to make further partition}
 
-\item{max.depth}{[gS] Integer: Maximum tree depth. (Default = 6)}
+\item{max.depth}{\link{gS} Integer: Maximum tree depth. (Default = 6)}
 
-\item{subsample}{[gS] Float:}
+\item{subsample}{\link{gS} Float:}
 
-\item{colsample.bytree}{[gS]}
+\item{colsample.bytree}{\link{gS}}
 
-\item{colsample.bylevel}{[gS]}
+\item{colsample.bylevel}{\link{gS}}
 
-\item{lambda}{[gS] L2 regularization on weights}
+\item{lambda}{\link{gS} L2 regularization on weights}
 
-\item{alpha}{[gS] L1 regularization on weights}
+\item{alpha}{\link{gS} L1 regularization on weights}
 
-\item{tree.method}{[gS] XGBoost tree construction algorithm (Default = "auto")}
+\item{tree.method}{\link{gS} XGBoost tree construction algorithm (Default = "auto")}
 
-\item{sketch.eps}{[gS] Float (0, 1):}
+\item{sketch.eps}{\link{gS} Float (0, 1):}
 
 \item{num.parallel.tree}{Integer: N of trees to grow in parallel: Results in Random Forest -like algorithm.
 (Default = 1; i.e. regular boosting)}
@@ -142,7 +142,7 @@ as well as full model output, if \code{save.mod} is TRUE}
 \code{save.mod} is TRUE by default if an \code{outdir} is defined. If set to TRUE, and no \code{outdir}
 is defined, outdir defaults to \code{paste0("./s.", mod.name)}}
 
-\item{lambda_bias}{[gS] for *linear* booster: L2 regularization on bias}
+\item{lambda_bias}{\link{gS} for \emph{linear} booster: L2 regularization on bias}
 }
 \value{
 \link{rtMod} object
@@ -152,7 +152,7 @@ Tune hyperparameters using grid search and resampling,
 train a final model, and validate it
 }
 \details{
-[gS]: indicates parameter will be autotuned by grid search if multiple values are passed.
+\link{gS}: indicates parameter will be autotuned by grid search if multiple values are passed.
 (s.XGB does its own grid search, similar to gridSearchLearn, may switch to gridSearchLearn similar to s.GBM)
 Learn more about XGboost's parameters here: http://xgboost.readthedocs.io/en/latest/parameter.html
 Case weights and therefore IPW do not seem to work, despite following documentation.

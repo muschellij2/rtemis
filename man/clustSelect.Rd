@@ -18,8 +18,8 @@ Name of function (Default) or function (\code{fn=TRUE}) or full name of algorith
 }
 \description{
 Accepts clusterer name (supports abbreviations) and returns \pkg{rtemis} function name or
-  the function itself.
-  If run with no parameters, prints list of available algorithms.
+the function itself.
+If run with no parameters, prints list of available algorithms.
 }
 \author{
 Efstathios D. Gennatas

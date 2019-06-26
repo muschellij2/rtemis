@@ -2,16 +2,16 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3}: Boxplot
+#' `mplot3`: Boxplot
 #'
 #' Draw boxplots
 #'
 #' @inheritParams mplot3.xy
 #' @param x Matrix: Each column will be drawn as a box
 #' @param col Vector of colors to use
-#' @param alpha Float: Alpha to be applied to \code{col}
+#' @param alpha Float: Alpha to be applied to `col`
 #' @param border Color for lines around boxes
-#' @param ... Additional arguments to \code{graphics::boxplot}
+#' @param ... Additional arguments to `graphics::boxplot`
 #' @author Efstathios D. Gennatas
 #' @export
 

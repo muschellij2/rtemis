@@ -5,10 +5,10 @@
 
 #' Random Forest Classification and Regression [C, R]
 #'
-#' Train a Random Forest for regression or classification using \code{ranger}
+#' Train a Random Forest for regression or classification using `ranger`
 #'
 #' You should cconsider, or try, setting mtry to NCOL(x), especially for small number of features.
-#' If \code{autotune = TRUE}, \code{randomForest::tuneRF} will be run to determine best \code{mtry}
+#' If `autotune = TRUE`, `randomForest::tuneRF` will be run to determine best `mtry`
 #'   value.
 #' [gS]: indicated parameter will be tuned by grid search if more than one value is passed
 #'
@@ -22,13 +22,13 @@
 #' @param splitrule String: For classification: "gini" (Default) or "extratrees";
 #' For regression: "variance" (Default), "extratrees" or "maxstat".
 #' For survival "logrank" (Default), "extratrees", "C" or "maxstat".
-#' @param probability Logical: If TRUE, grow a probability forest. See \code{ranger::ranger}
-#' @param classwt Vector, Float: Priors of the classes for \code{randomForest::tuneRF} if  \code{autotune = TRUE}.
+#' @param probability Logical: If TRUE, grow a probability forest. See `ranger::ranger`
+#' @param classwt Vector, Float: Priors of the classes for `randomForest::tuneRF` if  `autotune = TRUE`.
 #' For classification only; need not add up to 1
-#' @param ... Additional arguments to be passed to \code{ranger::ranger}
-#' @return \link{rtMod} object
+#' @param ... Additional arguments to be passed to `ranger::ranger`
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @family Ensembles

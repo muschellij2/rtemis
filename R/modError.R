@@ -15,8 +15,8 @@
 #' @param rho Logical: If TRUE, calculate Spearman's rho. Default = TRUE
 #' @param tau Logical: If TRUE, calculate Kendall's tau. Default = FALSE
 #'   This can be slow for long vectors
-#' @param na.rm Logical: Passed to \code{mean} and \code{range} functions. Default = TRUE
-#' @return Object of class \code{modError}
+#' @param na.rm Logical: Passed to `mean` and `range` functions. Default = TRUE
+#' @return Object of class `modError`
 #' @author Efstathios D Gennatas
 #' @export
 
@@ -236,7 +236,7 @@ logloss <- function(true, estimated.prob) {
 #'
 #' @param true True labels
 #' @param estimated Estimated labels
-#' @param harmonize Logical: If TRUE, run \link{factorHarmonize} first
+#' @param harmonize Logical: If TRUE, run [factorHarmonize] first
 #' @param verbose Logical: If TRUE, print messages to output. Default = TRUE
 #' @export
 
@@ -259,7 +259,7 @@ sensitivity <- function(true, estimated,
 #'
 #' @param true True labels
 #' @param estimated Estimated labels
-#' @param harmonize Logical: If TRUE, run \link{factorHarmonize} first
+#' @param harmonize Logical: If TRUE, run [factorHarmonize] first
 #' @param verbose Logical: If TRUE, print messages to output. Default = TRUE
 #' @export
 
@@ -284,7 +284,7 @@ specificity <- function(true, estimated,
 #'
 #' @param true True labels
 #' @param predicted Estimated labels
-#' @param harmonize Logical: passed to \link{sensitivity} and \link{specificity}, which use \link{factorHarmonize}.
+#' @param harmonize Logical: passed to [sensitivity] and [specificity], which use [factorHarmonize].
 #' Default = FALSE
 #' @param verbose Logical: If TRUE, print messages to output
 #' @export
@@ -329,12 +329,12 @@ factorHarmonize <- function(reference, x,
 # ::rtemis::
 # 2016-8 Efstathios D. Gennatas egenn.github.io
 
-#' Print \code{regError} object
+#' Print `regError` object
 #'
-#' \code{print} \code{regError} object
+#' `print` `regError` object
 #'
 #' @method print regError
-#' @param x \code{regError} object
+#' @param x `regError` object
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -357,12 +357,12 @@ print.regError <- function(x, ...) {
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' Print \code{survError} object
+#' Print `survError` object
 #'
-#' \code{print} \code{survError} object
+#' `print` `survError` object
 #'
 #' @method print survError
-#' @param x \code{survError} object
+#' @param x `survError` object
 #' @author Efstathios D. Gennatas
 
 print.survError <- function(x, ...) {

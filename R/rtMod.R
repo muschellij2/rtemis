@@ -2,8 +2,8 @@
 # ::rtemis::
 # 2016-9 Efstathios D. Gennatas egenn.github.io
 # TODO: survival analysis in elevate
-
 # rtMod R6 ====
+
 #' \pkg{rtemis} Supervised Model Class
 #'
 #' R6 Class for \pkg{rtemis} Supervised Models
@@ -15,7 +15,7 @@
 #' calculate error metrics (rtMod$error.test).
 #' This reflects generalizability of the model and is the error we care the most about.
 #' The validation set is used during model tuning. Within rtemis, validation sets are
-#' created automatically by \link{resample} when appropriate, they are not generally
+#' created automatically by [resample]` when appropriate, they are not generally
 #' input by the user, with few exceptions, as documented in individual functions.
 #' @docType class
 #' @name rtMod-class
@@ -36,7 +36,7 @@
 #' @field error.test Testing error
 #' @field question Question the model is hoping to answer
 #' @field extra Algorithm-specific output
-#' @field sessionInfo The output of \code{sessionInfo()} at the time the model was trained
+#' @field sessionInfo The output of `sessionInfo()` at the time the model was trained
 #' @author Efstathios D. Gennatas
 #' @export
 rtMod <- R6::R6Class("rtMod",
@@ -314,16 +314,16 @@ rtMod <- R6::R6Class("rtMod",
                      )) # /rtMod
 
 # rtMod S3 methods ====
-#' \code{rtMod} S3 methods
+#' `rtMod` S3 methods
 #'
-#' S3 methods for \code{rtMod} class.
-#' Excludes functions \code{print} and \code{plot} defined within the \link{rtMod} class itself.
+#' S3 methods for `rtMod` class.
+#' Excludes functions `print` and `plot` defined within the [rtMod] class itself.
 #'
 #' @name rtMod-methods
 NULL
 
 
-#' \code{print.rtMod}: \code{print} method for \code{rtMod} object
+#' `print.rtMod`: `print` method for `rtMod` object
 #'
 #' @method print rtMod
 #' @rdname rtMod-methods
@@ -335,7 +335,7 @@ print.rtMod <- function(x, ...) {
 } # rtemis::print.rtMod
 
 
-#' \code{fitted.rtMod}: \code{fitted} method for \code{rtMod} object
+#' `fitted.rtMod`: `fitted` method for `rtMod` object
 #'
 #' @method fitted rtMod
 #' @rdname rtMod-methods
@@ -347,7 +347,7 @@ fitted.rtMod <- function(object, ...) {
 } # rtemis::fitted.rtMod
 
 
-#' \code{predict.rtMod}: \code{predict} method for \code{rtMod} object
+#' `predict.rtMod`: `predict` method for `rtMod` object
 #'
 #' @method predict rtMod
 #' @param newdata Testing set features
@@ -471,7 +471,7 @@ predict.rtMod <- function(object,
 } # rtemis::predict.rtMod
 
 
-#' \code{residuals.rtMod}: \code{residuals} method for \code{rtMod} object
+#' `residuals.rtMod`: `residuals` method for `rtMod` object
 #'
 #' @method residuals rtMod
 #' @rdname rtMod-methods
@@ -483,7 +483,7 @@ residuals.rtMod <- function(object, ...) {
 }
 
 
-#' \code{plot.rtMod}: \code{plot} method for \code{rtMod} object
+#' `plot.rtMod`: `plot` method for `rtMod` object
 #'
 #' @method plot rtMod
 #' @rdname rtMod-methods
@@ -499,23 +499,23 @@ plot.rtMod <- function(x, estimate = NULL,
 } # rtemis::plot.rtemisRC
 
 
-#' \code{summary.rtMod}: \code{summary} method for \code{rtMod} object
+#' `summary.rtMod`: `summary` method for `rtMod` object
 #'
 #' @method summary rtMod
 #' @param object \pkg{rtemis} model
 #' @param plots Logical. Should plots be printed?
 #' @param cex Numeric. Character expansion factor
 #' @param fit.true.line \pkg{rtemis} model to use for fitted vs. true line
-#'   Options: \code{modSelect()}
+#'   Options: `modSelect()`
 #' @param resid.fit.line \pkg{rtemis} model to use for residuals vs. fitted line.
-#'   Options: \code{modSelect()}
+#'   Options: `modSelect()`
 #' @param fit.legend Logical. Should fit legends be printed? Defaults to TRUE
 #' @param se.fit Logical. Should 2 * standard error bands be plotted? Defaults to TRUE
 #' @param single.fig Logical. Should all plots be in same figure? Defaults to TRUE
 #' @param summary Logical. Should summary be printed? Defaults to TRUE
-#' @param theme String. \code{mplot3} theme to use. Options: "box", "darkbox", "light", "dark"
+#' @param theme String. `mplot3` theme to use. Options: "box", "darkbox", "light", "dark"
 #' @param title.col Color for main title
-#' @param ... Additional arguments to be passed to \link{mplot3}
+#' @param ... Additional arguments to be passed to [mplot3]
 #' @author Efstathios D. Gennatas
 #' @rdname rtMod-methods
 #' @export
@@ -625,9 +625,9 @@ summary.rtMod <- function(object,
 } # rtemis::summary.rtMod
 
 
-#' \code{coef.rtMod}: \code{coef} method for \code{rtMod} object
+#' `coef.rtMod`: `coef` method for `rtMod` object
 #'
-#' @param object Trained model of class \code{rtMod}
+#' @param object Trained model of class `rtMod`
 #' @author Efstathios D. Gennatas
 #' @rdname rtMod-methods
 #' @export
@@ -746,7 +746,7 @@ rtModClass <- R6::R6Class("rtModClass",
 #' @field x.name Name of x data
 #' @field y.name Name of y data
 #' @field xnames Character vector: Column names of x
-#' @field bag.resample.rtset List of settings for \link{resample}. Set using \link{rtset.bag.resample}
+#' @field bag.resample.rtset List of settings for [resample]. Set using [rtset.bag.resample]
 #' @field mod Trained model
 #' @field fitted Fitted values
 #' @field se.fit Standard error of the fit
@@ -839,13 +839,13 @@ rtModBag <- R6::R6Class("rtModBag",
 # rtModBag S3 methods ####
 #' rtModBag S3 methods
 #'
-#' S3 methods for \code{rtModBag} class that differ from those of the \code{rtMod} superclass
+#' S3 methods for `rtModBag` class that differ from those of the `rtMod` superclass
 #'
 #'
 #' @name rtModBag-methods
 NULL
 
-#' \code{predict.rtModBag}: \code{predict} method for \code{rtModBag} object
+#' `predict.rtModBag`: `predict` method for `rtModBag` object
 #'
 #' @method predict rtModBag
 #' @param newdata Testing set features
@@ -881,9 +881,9 @@ predict.rtModBag <- function(object, newdata, fn = "median", verbose = FALSE, ..
 #' @field x.name Name of x data
 #' @field y.name Name of y data
 #' @field xnames Character vector: Column names of x
-#' @field resampler List of settings for \link{resample}. Set using \link{rtset.cv.resample}
+#' @field resampler List of settings for [resample]. Set using [rtset.cv.resample]
 #' @field n.repeats Integer: Number of repeats. This is the outermost iterator: i.e. You will run
-#' \code{resampler} this many times.
+#' `resampler` this many times.
 #' @field mod Trained model
 #' @field fitted Fitted values
 #' @field se.fit Standard error of the fit
@@ -1172,42 +1172,42 @@ rtModCV <- R6::R6Class("rtModCV",
 
 
 # rtModCV S3 methods ####
-#' S3 methods for \code{rtModCV} class that differ from those of the \code{rtMod} superclass
+#' S3 methods for `rtModCV` class that differ from those of the `rtMod` superclass
 #'
 #' @name rtModCV-methods
 NULL
 
-#' #' \code{predict.rtModCV}: \code{predict} method for \code{rtModCV} object
-#' #'
-#' #' @method predict rtModCV
-#' #' @param newdata Testing set features
-#' #' @rdname rtModCV-methods
-#' #' @export
-#' predict.rtModCV <- function(object,
-#'                             newdata,
-#'                             fn = "median",
-#'                             verbose = TRUE, ...) {
-#'
-#'   # special cases: GBM - include n.trees: can be supplied in '...'
-#'   # BRUTO: newdata must be matrix
-#'   if (verbose) msg("Calculating estimated values using", fn, "of", length(object$mod), "bag resamples")
-#'   estimated.df <- sapply(object$mod, function(m) predict(m$mod1, newdata = newdata, ...))
-#'   estimated <- apply(estimated.df, 1, fn)
-#'   if (object$type == "Regression") {
-#'     estimated <- as.numeric(estimated)
-#'   } else {
-#'     estimated <- levels(object$y.train)[estimated]
-#'   }
-#'   return(estimated)
-#'
-#' } # rtemis::predict.rtModCV
+# #' `predict.rtModCV`: `predict` method for `rtModCV` object
+# #'
+# #' @method predict rtModCV
+# #' @param newdata Testing set features
+# #' @rdname rtModCV-methods
+# #' @export
+# predict.rtModCV <- function(object,
+#                             newdata,
+#                             fn = "median",
+#                             verbose = TRUE, ...) {
+#
+#   # special cases: GBM - include n.trees: can be supplied in '...'
+#   # BRUTO: newdata must be matrix
+#   if (verbose) msg("Calculating estimated values using", fn, "of", length(object$mod), "bag resamples")
+#   estimated.df <- sapply(object$mod, function(m) predict(m$mod1, newdata = newdata, ...))
+#   estimated <- apply(estimated.df, 1, fn)
+#   if (object$type == "Regression") {
+#     estimated <- as.numeric(estimated)
+#   } else {
+#     estimated <- levels(object$y.train)[estimated]
+#   }
+#   return(estimated)
+#
+# } # rtemis::predict.rtModCV
 
 
-#' \code{plot.rtModCV}: \code{plot} method for \code{rtModCV} object
+#' `plot.rtModCV`: `plot` method for `rtModCV` object
 #'
 #' @method plot rtModCV
-#' @param x \code{rtModCV} object
-#' @param ... Additional arguments to pass to \code{mplot3.fit}
+#' @param x `rtModCV` object
+#' @param ... Additional arguments to pass to `mplot3.fit`
 #' @rdname rtModCV-methods
 #' @export
 plot.rtModCV <- function(x, ...) {
@@ -1217,7 +1217,7 @@ plot.rtModCV <- function(x, ...) {
 } # rtemis::plot.rtModCV
 
 
-#' \code{summary.rtModCV}: \code{summary} method for \code{rtModCV} object
+#' `summary.rtModCV`: `summary` method for `rtModCV` object
 #'
 #' @method summary rtModCV
 #' @rdname rtModCV-methods
@@ -1229,7 +1229,7 @@ summary.rtModCV <- function(object, ...) {
 } # rtemis::summary.rtModCV
 
 
-#' \code{predict.rtModCV}: \code{predict} method for \code{rtModCV} object
+#' `predict.rtModCV`: `predict` method for `rtModCV` object
 #'
 #' @method predict rtModCV
 #' @param newdata Set of predictors to use
@@ -1490,13 +1490,13 @@ rtMeta <- R6::R6Class("rtMeta",
 # rtMeta S3 methods ####
 #' rtMeta S3 methods
 #'
-#' S3 methods for \code{rtMeta} class that differ from those of the \code{rtMod} superclass
+#' S3 methods for `rtMeta` class that differ from those of the `rtMod` superclass
 #'
 #'
 #' @name rtMeta-methods
 NULL
 
-#' \code{predict.rtMeta}: \code{predict} method for \code{rtMeta} object
+#' `predict.rtMeta`: `predict` method for `rtMeta` object
 #'
 #' @method predict rtMeta
 #' @param newdata Testing set features
@@ -1552,9 +1552,9 @@ cat(rtemis)
 #' The training set is used to build a model. The testing set is a separate set never touched during
 #' training and only used to a. create predictions using the trained model and b. estimate error metrics.
 #' This reflects generalizability of the model and is the error we care the most about. It is saved in rtemis models
-#' as \code{error.test}.
+#' as `error.test`.
 #' The validation set is used during model tuning. Within rtemis, validation sets are created and
-#' used automatically by \link{resample} when appropriate, they are not generally input by the user
+#' used automatically by [resample] when appropriate, they are not generally input by the user
 #' (with few exceptions).
 #' @docType class
 #' @name rtModLite-class
@@ -1587,13 +1587,13 @@ rtModLite <- R6::R6Class("rtModLite",
 # rtModLite S3 methods ====
 #' rtModLite S3 methods
 #'
-#' S3 methods for \code{rtModLite} class.
+#' S3 methods for `rtModLite` class.
 #'
 #' @name rtModLite-methods
 NULL
 
 
-#' \code{print.rtModLite}: \code{print} method for \code{rtModLite} object
+#' `print.rtModLite`: `print` method for `rtModLite` object
 #'
 #' @method print rtModLite
 #' @rdname rtModLite-methods
@@ -1605,7 +1605,7 @@ print.rtModLite <- function(x, ...) {
 } # rtemis::print.rtModLite
 
 
-#' \code{predict.rtModLite}: \code{predict} method for \code{rtModLite} object
+#' `predict.rtModLite`: `predict` method for `rtModLite` object
 #'
 #' @method predict rtModLite
 #' @param newdata Testing set features

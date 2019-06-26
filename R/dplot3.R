@@ -2,7 +2,7 @@
 # ::rtemis::
 # 2016 Efstathios D. Gennatas egenn.github.io
 
-#' Dynamic Plots (\code{plotly})
+#' Dynamic Plots (`plotly`)
 #'
 #' Build dynamic plots that can be viewed in RStudio Viewer, a web browser, or exported to a static image.
 #' Support for (x, y) scatter plots with optional fit line(lm, or gam), and density plots.
@@ -18,19 +18,19 @@
 #'   Default = "circle"
 #' @param point.labels String, optional: Point labels displayed on mouse over
 #' @param fit String, optional: "lm", "gam"
-#' @param gam.k Integer: Number of bases for \code{mgcv::gam}'s smoothing spline
+#' @param gam.k Integer: Number of bases for `mgcv::gam`'s smoothing spline
 #' @param fit.width Float: Width of fit line
 #' @param fit.color Color of fit line
 #' @param fit.alpha Float: Alpha of fit line
-#' @param se.fit Logical: If TRUE, draws +/- \code{se.times * standard error}
+#' @param se.fit Logical: If TRUE, draws +/- `se.times * standard error`
 #' @param se.times Float: Multiplier for standard error band. Default = 2
 #' @param se.color Color of S.E. band
 #' @param se.alpha Float: Alpha of S.E. band
 #' @param density.color Color of density line
 #' @param density.alpha Float: Alpha of density line
 #' @param density.width Integer: Width of density line
-#' @param density.mean Logical: If TRUE, draw vertical line at \code{mean(x)}
-#' @param density.mean.width Integer: Width of \code{density.mean} line. Default = 2
+#' @param density.mean Logical: If TRUE, draw vertical line at `mean(x)`
+#' @param density.mean.width Integer: Width of `density.mean` line. Default = 2
 #' @param main String: Plot title
 #' @param xlab String: x-axis label
 #' @param ylab String: y-axis label
@@ -46,7 +46,7 @@
 #' @param axes.square Logical: If TRUE, make axes square
 #' @param showlegend Logical: If TRUE, show legends
 #' @author Efstathios D. Gennatas
-#' @seealso \link{mplot3}
+#' @seealso [mplot3]
 #' @export
 
 dplot3 <- function(x, y = NULL,

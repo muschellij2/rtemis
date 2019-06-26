@@ -4,7 +4,7 @@
 
 #' Write data to RDS file
 #'
-#' @param object \code{R} object
+#' @param object `R` object
 #' @param outdir Path to output directory
 #' @param verbose Logical
 #' @author Efstathios D. Gennatas

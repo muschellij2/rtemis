@@ -9,7 +9,7 @@
 #' @inheritParams s.GLM
 #' @param n.cores Integer. N of cores to use
 #' @param verbose Logical. Print summary to screen
-#' @param ... Additional parameters to be passed to \code{extraTrees}
+#' @param ... Additional parameters to be passed to `extraTrees`
 #' @return Object of class \pkg{rtemis}
 #' @examples
 #' \dontrun{
@@ -17,7 +17,7 @@
 #' y <- .6 * x + 12 + rnorm(100)
 #' mod <- s.ET(x, y)}
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @export

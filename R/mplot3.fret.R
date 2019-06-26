@@ -2,7 +2,7 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3}: Guitar Fretboard
+#' `mplot3`: Guitar Fretboard
 #'
 #' Draw color-coded notes on a guitar fretboard for standard E-A-D-G-B-e tuning
 #'

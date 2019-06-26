@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.BRUTO.R
 \name{s.BRUTO}
 \alias{s.BRUTO}
-\title{Projection Pursuit Regression (BRUTO) [R]}
+\title{Projection Pursuit Regression (BRUTO) \link{R}}
 \usage{
 s.BRUTO(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, grid.resample.rtset = rtset.grid.resample(),

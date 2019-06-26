@@ -4,18 +4,18 @@
 
 #' Adaboost Binary Classifier [C]
 #'
-#' Train an Adaboost Classifier using \code{ada::ada}
+#' Train an Adaboost Classifier using `ada::ada`
 #'
-#' \code{ada::ada} does not support case weights
+#' `ada::ada` does not support case weights
 #' @inheritParams s.GLM
 #' @param loss String: "exponential" (Default), "logistic"
 #' @param type String: "discrete", "real", "gentle"
 #' @param iter Integer: Number of boosting iterations to perform. Default = 50
 #' @param nu Float: Shrinkage parameter for boosting. Default = .1
 #' @param bag.frac Float (0, 1]: Sampling fraction for out-of-bag samples
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @family Ensembles

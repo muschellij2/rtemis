@@ -18,11 +18,11 @@
 #' @param max.bins Integer. Max N of bins used for discretizing continuous features and for
 #'   choosing how to split on features at each node. More bins give higher granularity.
 #' @param type "regression" for continuous outcome; "classification" for categorical outcome.
-#'   "auto" will result in regression for numeric \code{y} and classification otherwise
+#'   "auto" will result in regression for numeric `y` and classification otherwise
 #' @param spark.master Spark cluster URL or "local"
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @export

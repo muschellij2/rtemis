@@ -4,7 +4,7 @@
 
 #' Support Vector Machines [C, R]
 #'
-#' Train an SVM learner using \code{e1071::svm}
+#' Train an SVM learner using `e1071::svm`
 #'
 #' [gS] denotes parameters that will be tuned by cross-validation if more than one value is passed.
 #' Regarding SVM tuning, the following guide from the LIBSVM authors can be useful:
@@ -16,17 +16,17 @@
 #' @inheritParams s.CART
 #' @inheritParams resample
 #' @param class.weights Float, length = n levels of outcome: Weights for each outcome class.
-#' For classification, \code{class.weights} takes precedence over \code{ipw}, therefore set
-#' \code{class.weights = NULL} if using \code{ipw}. Default = NULL
+#' For classification, `class.weights` takes precedence over `ipw`, therefore set
+#' `class.weights = NULL` if using `ipw`. Default = NULL
 #' @param kernel String: "linear", "polynomial", "radial", "sigmoid"
-#' @param degree [gS] Integer: Degree for \code{kernel = "polynomial"}. Default = 3
+#' @param degree [gS] Integer: Degree for `kernel = "polynomial"`. Default = 3
 #' @param cost [gS] Float: Cost of constraints violation; the C constant of the regularization term in the Lagrange
 #'   formulation.
-#' @param gamma [gS] Float: Parameter used in all kernels except \code{linear}
-#' @param coef0 [gS] Float: Parameter used by kernels \code{polynomial} and \code{sigmoid}
-#' @param ... Additional arguments to be passed to \code{e1071::svm}
+#' @param gamma [gS] Float: Parameter used in all kernels except `linear`
+#' @param coef0 [gS] Float: Parameter used by kernels `polynomial` and `sigmoid`
+#' @param ... Additional arguments to be passed to `e1071::svm`
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

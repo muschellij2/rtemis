@@ -7,19 +7,19 @@
 #' Very simple preview of colors
 #'
 #' @param col Input color. Hexadecimal or any string that R recognizes.
-#'   (See all with \code{colors()})
+#'   (See all with `colors()`)
 #' @param main String: Plot title. Default = NULL
-#' @param names Logical: If TRUE, add l\code{names(col)} if not NULL. Default = TRUE
-#' @param names.y Float: y position to place \code{names}. Adjust as needed. Default = 1.045
+#' @param names Logical: If TRUE, add l`names(col)` if not NULL. Default = TRUE
+#' @param names.y Float: y position to place `names`. Adjust as needed. Default = 1.045
 #' @param srt Float: String rotation in degrees. Default = 45
 #' @param alpha Float: Alpha level. Default = 1
 #' @param ylim Float, vector, length 2: y axis limits. Default = c(0.95, 1.1)
-#' @param pch Integer or single character: The \code{pch} parameter of \code{par}
+#' @param pch Integer or single character: The `pch` parameter of `par`
 #' @param cex Float: Character expansion factor. Default = 26
 #' @param mar Float, vector, length 4: Plot margins. Default = c(0, 1.7, 0.6, 2.8)
-#' @param main.line Float: Line to plot \code{main} Default = 0
+#' @param main.line Float: Line to plot `main` Default = 0
 #' @param filename String, optional: Path to file to save plot
-#' @param par.reset Logical: If TRUE, reset \code{par} before exiting
+#' @param par.reset Logical: If TRUE, reset `par` before exiting
 #' @param pdf.width Float: PDF output width
 #' @param pdf.height Float: PDF output height
 #' @author Efstathios D. Gennatas

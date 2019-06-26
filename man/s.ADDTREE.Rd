@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.ADDTREE.R
 \name{s.ADDTREE}
 \alias{s.ADDTREE}
-\title{Additive Tree: Tree-Structured Boosting [C]}
+\title{Additive Tree: Tree-Structured Boosting \link{C}}
 \usage{
 s.ADDTREE(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, weights = NULL, update = c("exponential",
@@ -40,12 +40,12 @@ Columns must correspond to columns in \code{x}}
 over \code{ipw}, therefore set \code{weights = NULL} if using \code{ipw}.
 Note: If \code{weight} are provided, \code{ipw} is not used. Leave NULL if setting \code{ipw = TRUE}. Default = NULL}
 
-\item{min.hessian}{[gS] Minimum second derivative to continue splitting}
+\item{min.hessian}{\link{gS} Minimum second derivative to continue splitting}
 
-\item{gamma}{[gS] acceleration factor = lambda / (1 + lambda)
-#' @param max.depth [gS] maximum depth of the tree}
+\item{gamma}{\link{gS} acceleration factor = lambda / (1 + lambda)
+#' @param max.depth \link{gS} maximum depth of the tree}
 
-\item{learning.rate}{[gS] learning rate for the Newton Raphson step that updates the function values
+\item{learning.rate}{\link{gS} learning rate for the Newton Raphson step that updates the function values
 of the node}
 
 \item{ipw}{Logical: If TRUE, apply inverse probability weighting (for Classification only).
@@ -110,7 +110,7 @@ is the 'positive' class
 Factor levels should not contain the "/" character (it is used to separate conditions
 in the addtree object)
 
-[gS] Indicates that more than one value can be supplied, which will result in grid search using
+\link{gS} Indicates that more than one value can be supplied, which will result in grid search using
 internal resampling
 lambda <- gamma/(1 - gamma)
 }

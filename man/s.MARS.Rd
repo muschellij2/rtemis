@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.MARS.R
 \name{s.MARS}
 \alias{s.MARS}
-\title{Multivariate adaptive regression splines (MARS) [C, R]}
+\title{Multivariate adaptive regression splines (MARS) \link{C, R}}
 \usage{
 s.MARS(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, grid.resample.rtset = rtset.grid.resample(),
@@ -27,18 +27,18 @@ must have set of columns as \code{x}}
 
 \item{y.test}{(Optional) Numeric vector of validation set outcomes}
 
-\item{degree}{[gS] Integer: Maximum degree of interaction. Default = 2}
+\item{degree}{\link{gS} Integer: Maximum degree of interaction. Default = 2}
 
-\item{penalty}{[gS] Float: GCV penalty per knot. 0 penalizes only terms, not knots.
+\item{penalty}{\link{gS} Float: GCV penalty per knot. 0 penalizes only terms, not knots.
 -1 means no penalty. Default = 3}
 
-\item{nk}{[gS] Integer: Maximum number of terms created by the forward pass.
+\item{nk}{\link{gS} Integer: Maximum number of terms created by the forward pass.
 See \code{earth::earth}}
 
-\item{pmethod}{[gS] String: Pruning method: "backward", "none", "exhaustive", "forward",
+\item{pmethod}{\link{gS} String: Pruning method: "backward", "none", "exhaustive", "forward",
 "seqrep", "cv". Default = "forward"}
 
-\item{nprune}{[gS] Integer: Max N of terms (incl. intercept) in the pruned model}
+\item{nprune}{\link{gS} Integer: Max N of terms (incl. intercept) in the pruned model}
 
 \item{...}{Additional parameters to pass to \code{earth::earth}}
 }

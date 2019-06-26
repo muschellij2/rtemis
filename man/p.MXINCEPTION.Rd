@@ -2,7 +2,7 @@
 % Please edit documentation in R/p.MXINCEPTION.R
 \name{p.MXINCEPTION}
 \alias{p.MXINCEPTION}
-\title{Classify Images using pre-trained Inception network with \code{mxnet} [C]}
+\title{Classify Images using pre-trained Inception network with \code{mxnet} \link{C}}
 \usage{
 p.MXINCEPTION(img, img.path = NULL, iteration = 39,
   plot.input = FALSE, plot.normed = FALSE, plot.graphviz = FALSE,

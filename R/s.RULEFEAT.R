@@ -12,15 +12,15 @@
 #' http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf
 #'
 #' @inheritParams s.GBM
-#' @param gbm.params Named list: Parameters for \link{s.GBM}
-#' @param meta.alpha Float [0, 1]: \code{alpha} for \link{s.GLMNET}, Default = 1
-#' @param meta.lambda Float: \code{lambda} for \link{s.GLMNET}. Default = NULL (will be determined automatically
+#' @param gbm.params Named list: Parameters for [s.GBM]
+#' @param meta.alpha Float [0, 1]: `alpha` for [s.GLMNET], Default = 1
+#' @param meta.lambda Float: `lambda` for [s.GLMNET]. Default = NULL (will be determined automatically
 #' by crossvalidation)
-#' @param meta.extra.params Named list: Parameters for \link{s.GLMNET} for the feature
+#' @param meta.extra.params Named list: Parameters for [s.GLMNET] for the feature
 #' selection step
 #' @param cases.by.rules Matrix of cases by rules from a previoue rulefeat run. If provided,
 #' the GBM step is skipped. Default = NULL
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
 #' @references Friedman JH, Popescu BE, "Predictive Learning via Rule Ensembles",
 #' http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf
@@ -262,10 +262,10 @@ s.RULEFEAT <- function(x, y = NULL,
 # predict.ruleFeat
 # ::rtemis::
 
-#' \code{predict} method for \code{ruleFeat} object
+#' `predict` method for `ruleFeat` object
 #'
-#' @param object \code{ruleFeat} object
-#' @param newdata Feature matrix / data.frame: will be converted to \code{data.table}
+#' @param object `ruleFeat` object
+#' @param newdata Feature matrix / data.frame: will be converted to `data.table`
 #' @param verbose Logical: If TRUE, print messages during execution. Default = TRUE
 #' @param ... Ignored
 #' @return Vector of estimated values

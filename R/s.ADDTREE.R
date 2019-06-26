@@ -27,8 +27,8 @@
 #' of the node
 #' @param min.hessian [gS] Minimum second derivative to continue splitting
 #' @param match.rules Logical: If TRUE, match cases to rules to get statistics per node, i.e. what
-#' percent of cases match each rule. If available, these are used by \link{mplot3.addtree} when plotting
-#' @return Object of class \link{rtMod}
+#' percent of cases match each rule. If available, these are used by [mplot3.addtree] when plotting
+#' @return Object of class [rtMod]
 #' @author Efstathios D. Gennatas
 #' @family Supervised Learning
 #' @family Tree-based methods

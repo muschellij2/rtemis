@@ -4,17 +4,17 @@
 
 #' Distill rules from trained RF and GBM learners
 #'
-#' Extract rules from RF or GBM model, prune, and remove unnecessary rules using \code{inTrees}
+#' Extract rules from RF or GBM model, prune, and remove unnecessary rules using `inTrees`
 #' 
-#' Models must be trained with \link{s.RF} or \link{s.GBM} / \link{s.GBM3}
+#' Models must be trained with [s.RF] or [s.GBM] / [s.GBM3]
 #' 
 #' @param mod A trained RF or GBM model
 #' @param x The training set features
-#' @param y The training set outcomes. If NULL, assumed to be last column of \code{x}
+#' @param y The training set outcomes. If NULL, assumed to be last column of `x`
 #' @param n.trees Integer: Number of trees to extract
 #' @param maxdepth Integer: Max depth to consider
-#' @param maxDecay Float: See \code{inTree=es::pruneRule}
-#' @param typeDecay Integer: See \code{inTreees::pruneRule}
+#' @param maxDecay Float: See `inTree=es::pruneRule`
+#' @param typeDecay Integer: See `inTreees::pruneRule`
 #' @param verbose Logical: If TRUE, print messages to output
 #' @author Efstathios D. Gennatas
 #' @export

@@ -5,26 +5,26 @@
 
 #' \pkg{rtemis} internal: Gradient Boosting of Additive Trees
 #'
-#' Boosted additive trees. This is lower-level than \code{s.*} functions
+#' Boosted additive trees. This is lower-level than `s.*` functions
 #' @inheritParams s.GLM
 #' @param x Data frame: Input features
 #' @param y Vector: Output
-#' @param mod Algorithm to boost, for options, see \link{modSelect}
-#' @param mod.params Named list of arguments for \code{mod}
+#' @param mod Algorithm to boost, for options, see [modSelect]
+#' @param mod.params Named list of arguments for `mod`
 #' @param learning.rate Float (0, 1] Learning rate for the additive steps
 #' @param init Float: Initial value for prediction. Default = mean(y)
-#' @param cxrcoef Logical: If TRUE, pass \code{cxr = TRUE, cxrcoef = TRUE} to \link{predict.addTreeRaw}
+#' @param cxrcoef Logical: If TRUE, pass `cxr = TRUE, cxrcoef = TRUE` to [predict.addTreeRaw]
 #' @param tolerance Float: If training error <= this value, training stops
 #' @param tolerance.valid Float: If validation error <= this value, training stops
 #' @param max.iter Integer: Maximum number of iterations (additive steps) to perform. Default = 10
 #' @param trace Integer: If > 0, print diagnostic info to console
-#' @param base.verbose Logical: \code{verbose} argument passed to learner
+#' @param base.verbose Logical: `verbose` argument passed to learner
 #' @param print.error.plot String or Integer: "final" plots a training and validation (if available) error curve at the
 #' end of training. If integer, plot training and validation error curve every this many iterations
 #' during training
 #' for each base learner
 #' @param ... Additional parameters to be passed to learner
-#' @return \code{addtboost} object
+#' @return `addtboost` object
 #' @author Efstathios D. Gennatas
 #' @keywords internal
 
@@ -229,7 +229,7 @@ addtboost <- function(x, y,
 } # rtemis::addtboost
 
 
-#' Print method for \link{boost} object
+#' Print method for [boost] object
 #'
 #' @method print addtboost
 #' @author Efstathios D. Gennatas
@@ -245,9 +245,9 @@ print.addtboost <- function(x, ...) {
 } # rtemis::print.addtboost
 
 
-#' Predict method for \code{addtboost} object
+#' Predict method for `addtboost` object
 #'
-#' @param object \link{addtboost} object
+#' @param object [addtboost] object
 #' @method predict addtboost
 #' @author Efstathios D. Gennatas
 #' @export
@@ -301,10 +301,10 @@ predict.addtboost <- function(object,
 
 #' Expand boosting series
 #'
-#' Add iterations to a \link{boost} object
+#' Add iterations to a [boost] object
 #'
 #' @inheritParams addtboost
-#' @param object \link{boost} object
+#' @param object [boost] object
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -346,7 +346,7 @@ expand.addtboost <- function(object,
 } # rtemis::expand.addtboost
 
 
-#' \code{as.addboost} Place model in \link{addtboost} structure
+#' `as.addboost` Place model in [addtboost] structure
 #'
 #' @author Efstathios D. Gennatas
 #' @export
@@ -382,16 +382,16 @@ as.addtboost <- function(object,
 } # rtemis::as.addtboost
 
 
-#' Update \link{boost} object's fitted values
+#' Update [boost] object's fitted values
 #'
-#' Calculate new fitted values for a \link{boost}.
+#' Calculate new fitted values for a [boost].
 #' Advanced use only: run after updating learning.rate
 #'
 #' All this will eventually be automated using an R6 object, maybe
 #'
 #' @method update addtboost
-#' @param object \link{addtboost} object
-#' @return \link{addtboost} object
+#' @param object [addtboost] object
+#' @return [addtboost] object
 #' @author Efstathios D. Gennatas
 #' @export
 # TODO: save penultimate fitted, add last
@@ -416,7 +416,7 @@ update.addtboost <- function(object, x, y = NULL,
 } # rtemis::update.addtboost
 
 
-#' \code{as.addtboost} Place model in \link{addtboost} structure
+#' `as.addtboost` Place model in [addtboost] structure
 #'
 #' @author Efstathios D. Gennatas
 #' @export

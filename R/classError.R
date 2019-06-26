@@ -103,9 +103,9 @@ classError <- function(true, estimated,
 } # rtemis::classError
 
 
-#' Print \link{classError}
+#' Print [classError]
 #' 
-#' @param x Object of type \link{classError}
+#' @param x Object of type [classError]
 #' @param ... Not used
 #' @author Efstathios D. Gennatas
 #' @export

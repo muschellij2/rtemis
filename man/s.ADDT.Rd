@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.ADDT.R
 \name{s.ADDT}
 \alias{s.ADDT}
-\title{Additive Tree with Linear Nodes [R]}
+\title{Additive Tree with Linear Nodes \link{R}}
 \usage{
 s.ADDT(x, y = NULL, x.test = NULL, y.test = NULL, max.depth = 5,
   lambda = 0.05, minobsinnode = 2, minobsinnode.lin = 10,

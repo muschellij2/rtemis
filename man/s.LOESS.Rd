@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.LOESS.R
 \name{s.LOESS}
 \alias{s.LOESS}
-\title{Local Polynomial Regression (LOESS) [R]}
+\title{Local Polynomial Regression (LOESS) \link{R}}
 \usage{
 s.LOESS(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, print.plot = TRUE, plot.fitted = NULL,

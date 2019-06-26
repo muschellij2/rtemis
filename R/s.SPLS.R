@@ -5,10 +5,10 @@
 
 #' Sparse Partial Least Squares Regression [C, R]
 #'
-#' Train an SPLS model using \code{spls::spls} (Regression) and \code{spls::splsda} (Classification)
+#' Train an SPLS model using `spls::spls` (Regression) and `spls::splsda` (Classification)
 #'
-#' [gS] denotes argument can be passed as a vector of values, which will trigger a grid search using \link{gridSearchLearn}
-#' \code{np::npreg} allows inputs with mixed data types.
+#' [gS] denotes argument can be passed as a vector of values, which will trigger a grid search using [gridSearchLearn]
+#' `np::npreg` allows inputs with mixed data types.
 #'
 #' @inheritParams s.CART
 #' @param k [gS] Integer: Number of components to estimate. Default = 2
@@ -21,12 +21,12 @@
 #' @param scale.x Logical: if TRUE, scale features by dividing each column by its sample standard deviation
 #' @param scale.y Logical: if TRUE, scale outcomes by dividing each column by its sample standard deviation
 #' @param maxstep [gS] Integer: Maximum number of iteration when fitting direction vectors. Default = 100
-#' @param classifier String: Classifier used by \code{spls::splsda} "lda" or "logistic": Default = "lda"
-#' @param n.cores Integer: Number of cores to be used by \link{gridSearchLearn}, if applicable
-#' @param ... Additional parameters to be passed to \code{npreg}
+#' @param classifier String: Classifier used by `spls::splsda` "lda" or "logistic": Default = "lda"
+#' @param n.cores Integer: Number of cores to be used by [gridSearchLearn], if applicable
+#' @param ... Additional parameters to be passed to `npreg`
 #' @return Object of class \pkg{rtemis}
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @examples
 #' \dontrun{

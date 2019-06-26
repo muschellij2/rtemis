@@ -8,15 +8,15 @@
 #'
 #' Train an ensemble using boosting of any learner
 #'
-#' If \code{learning.rate} is set to 0, a nullmod will be created
+#' If `learning.rate` is set to 0, a nullmod will be created
 #' @inheritParams s.GLM
 #' @param x.valid Data.frame; optional: Validation data
 #' @param y.valid Float, vector; optional: Validation outcome
-#' @param mod String: Algorithm to train base learners, for options, see \link{modSelect}. Default = "cart"
+#' @param mod String: Algorithm to train base learners, for options, see [modSelect]. Default = "cart"
 #' @param resid Float, vector, length = length(y): Residuals to work on. Do not change unless you know
 #' what you're doing. Default = NULL, for regular boosting
 #' @param boost.obj [Internal use]
-#' @param mod.params Named list of arguments for \code{mod}
+#' @param mod.params Named list of arguments for `mod`
 #' @param case.p Float (0, 1]: Train each iteration using this perceent of cases. Default = 1, i.e. use all cases
 #' @param learning.rate Float (0, 1] Learning rate for the additive steps
 #' @param init Float: Initial value for prediction. Default = mean(y)
@@ -25,15 +25,15 @@
 #' @param max.iter Integer: Maximum number of iterations (additive steps) to perform. Default = 10
 #' @param trace Integer: If > 0, print diagnostic info to console
 #' @param print.progress.every Integer: Print progress over this many iterations
-#' @param base.verbose Logical: \code{verbose} argument passed to learner
+#' @param base.verbose Logical: `verbose` argument passed to learner
 #' @param print.error.plot String or Integer: "final" plots a training and validation (if available) error curve at the
 #' end of training. If integer, plot training and validation error curve every this many iterations
 #' during training. "none" for no plot.
-#' @param print.base.plot Logical: Passed to \code{print.plot} argument of base learner, i.e. if TRUE, print error plot
+#' @param print.base.plot Logical: Passed to `print.plot` argument of base learner, i.e. if TRUE, print error plot
 #' for each base learner
 #' @param plot.type String: "l" or "p". Plot using lines or points. Default = "l"
 #' @param prefix Internal
-#' @param ... Additional parameters to be passed to learner define by \code{mod}
+#' @param ... Additional parameters to be passed to learner define by `mod`
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -365,7 +365,7 @@ boost <- function(x, y = NULL,
 } # rtemis::boost
 
 
-#' Print method for \link{boost} object
+#' Print method for [boost] object
 #'
 #' @method print boost
 #' @author Efstathios D. Gennatas
@@ -382,7 +382,7 @@ print.boost <- function(x, ...) {
 } # rtemis::print.boost
 
 
-#' Predict method for \code{boost} object
+#' Predict method for `boost` object
 #'
 #' @method predict boost
 #' @author Efstathios D. Gennatas
@@ -442,10 +442,10 @@ predict.boost <- function(object,
 
 #' Expand boosting series
 #'
-#' Expand a \link{boost} object by adding more iterations
+#' Expand a [boost] object by adding more iterations
 #'
 #' @inheritParams boost
-#' @param object \link{boost} object
+#' @param object [boost] object
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -490,7 +490,7 @@ expand.boost <- function(object,
 } # rtemis::expand.boost
 
 
-#' \code{as.boost} Place model in \link{boost} structure
+#' `as.boost` Place model in [boost] structure
 #'
 #' @param object rtMod model
 #' @param x Data.frame, optional: if provided, use to calculate fitted values of new boost object
@@ -499,10 +499,10 @@ expand.boost <- function(object,
 #' @param y.valid Float, vector; optional: Validation outcome
 #' @param learning.rate Float: Learning rate for new boost object. Default = 1
 #' @param init Float: Initial value for new boost object. Default = 0
-#' @param apply.lr Logical: Only considered is \code{x = NULL}. If TRUE, new boost object's fitted values will
+#' @param apply.lr Logical: Only considered is `x = NULL`. If TRUE, new boost object's fitted values will
 #' be object$fitted * learning.rate, otherwise object$fitted
-#' @param tolerance Float: error tolerance for new boost object. See \link{boost}
-#' @param tolerance.valid Float: error tolerance for validation set. See \link{boost}
+#' @param tolerance Float: error tolerance for new boost object. See [boost]
+#' @param tolerance.valid Float: error tolerance for validation set. See [boost]
 #' @author Efstathios D. Gennatas
 #' @export
 # TODO: add x = NULL, if not NULL calculate fitted values
@@ -588,18 +588,18 @@ as.boost <- function(object,
 
 } # rtemis::as.boost
 
-#' \pkg{rtemis} internals: Update \code{rtMod} \link{boost} object's fitted values in-place
+#' \pkg{rtemis} internals: Update `rtMod` [boost] object's fitted values in-place
 #'
-#' Calculate new fitted values for a \link{boost} object.
-#' Advanced use only: run with new \code{x} or after updating learning.rate in object
+#' Calculate new fitted values for a [boost] object.
+#' Advanced use only: run with new `x` or after updating learning.rate in object
 #'
-#' @param object \link{boost} object
+#' @param object [boost] object
 #' @param x Data frame: Features
-#' @param last.step.only Logical: If TRUE, \code{x} must be provided and only the last meta model will be updated
-#' using this \code{x}
-#' @return \link{boost} object
+#' @param last.step.only Logical: If TRUE, `x` must be provided and only the last meta model will be updated
+#' using this `x`
+#' @return [boost] object
 #' @author Efstathios D. Gennatas
-#' @return Nothing; updates \code{object} in-place
+#' @return Nothing; updates `object` in-place
 #' @export
 # TODO: add support for x.test
 

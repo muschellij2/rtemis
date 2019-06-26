@@ -4,12 +4,12 @@
 
 #' Linear Discriminant Analysis
 #'
-#' Train an LDA Classifier using \code{MASS::lda}
+#' Train an LDA Classifier using `MASS::lda`
 #'
 #' @inheritParams s.GLM
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

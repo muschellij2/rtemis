@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.DA.R
 \name{s.DA}
 \alias{s.DA}
-\title{Linear and Quadratic Discriminant Analysis [C]}
+\title{Linear and Quadratic Discriminant Analysis \link{C}}
 \usage{
 s.DA(x, y = NULL, x.test = NULL, y.test = NULL, da.type = "lin",
   prior = NULL, method = "moment", nu = NULL, upsample = FALSE,

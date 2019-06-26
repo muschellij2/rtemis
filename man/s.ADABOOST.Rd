@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.ADABOOST.R
 \name{s.ADABOOST}
 \alias{s.ADABOOST}
-\title{Adaboost Binary Classifier [C]}
+\title{Adaboost Binary Classifier \link{C}}
 \usage{
 s.ADABOOST(x, y = NULL, x.test = NULL, y.test = NULL,
   loss = "exponential", type = "discrete", iter = 50, nu = 0.1,

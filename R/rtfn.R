@@ -10,7 +10,7 @@
 #' @param x Vector, factor or integer
 #' @param na.rm Logical: If TRUE, remove any NA values, if present, before finding mode.
 #' Default = TRUE
-#' @return The mode of \code{x}
+#' @return The mode of `x`
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -194,7 +194,7 @@ cube <- function(x) {
 #' Collapse data.frame to vector by getting column max
 #' 
 #' @param x Matrix or Data frame input
-#' @param na.rm Logical: passed to \code{max}, If TRUE, ignore NA values,
+#' @param na.rm Logical: passed to `max`, If TRUE, ignore NA values,
 #' otherwise if NA is present in any column, NA will be returned. Default = TRUE
 #' @author Efstathios D. Gennatas
 #' @export
@@ -233,7 +233,7 @@ crules <- function(...) {
 } # rtemis::crules
 
 
-#' Say No to \code{NULL}
+#' Say No to `NULL`
 #'
 #' Returns the input, unless it is NULL, in which case it returns an empty vector / list, etc 
 #' of defined type
@@ -241,7 +241,7 @@ crules <- function(...) {
 #' This can be useful when creating S4, RC, or R6 objects
 #'
 #' @param x Input of any type, may be NULL
-#' @param defType If \code{x} is NULL, return empty vector of this type. Options: list, numeric, 
+#' @param defType If `x` is NULL, return empty vector of this type. Options: list, numeric, 
 #' character, integer
 #' @author Efstathios D. Gennatas
 #' @export
@@ -289,7 +289,7 @@ psd <- function(x) {
 #' @param mean Float: Mean. Default = 0
 #' @param sd Float: Standard deviation. Default = 1
 #' @param return.df Logical: If TRUE, return data.frame, otherwise matrix. Default = TRUE
-#' @param seed Integer: Set seed for \code{rnorm}. Default = NULL
+#' @param seed Integer: Set seed for `rnorm`. Default = NULL
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -320,7 +320,7 @@ rnormmat <- function(nrow = 10, ncol = 10,
 #' @param min Float: Min Default = 0
 #' @param max Float: Max. Default = 1
 #' @param return.df Logical: If TRUE, return data.frame, otherwise matrix. Default = TRUE
-#' @param seed Integer: Set seed for \code{rnorm}. Default = NULL
+#' @param seed Integer: Set seed for `rnorm`. Default = NULL
 #' @author Efstathios D. Gennatas
 #' @export
 

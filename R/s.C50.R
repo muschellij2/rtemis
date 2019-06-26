@@ -9,9 +9,9 @@
 #' @inheritParams s.GLM
 #' @param trials Integer [1, 100]: Number of boosting iterations
 #' @param rules Logical: If TRUE, decompose the tree to a rule-based model
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @family Interpretable models

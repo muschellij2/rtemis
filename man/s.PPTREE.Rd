@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.PPTREE.R
 \name{s.PPTREE}
 \alias{s.PPTREE}
-\title{Projection Pursuit Tree Classification [C]}
+\title{Projection Pursuit Tree Classification \link{C}}
 \usage{
 s.PPTREE(x, y = NULL, x.test = NULL, y.test = NULL,
   PPmethod = "LDA", weight = TRUE, r = NULL, lambda = NULL,

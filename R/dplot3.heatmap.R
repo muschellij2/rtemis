@@ -5,7 +5,7 @@
 
 #' Dynamic Heatmap
 #'
-#' Draw a dynamic heatmap using \code{heatmaply}
+#' Draw a dynamic heatmap using `heatmaply`
 #'
 #' @inheritParams colorGrad
 #' @inheritParams mplot3.xy
@@ -13,23 +13,23 @@
 #' @param Rowv Logical or dendrogram.
 #'   If Logical: Compute dendrogram and reorder rows. Defaults to FALSE
 #'   If dendrogram: use as is, without reordering
-#'   See more at \code{heatmaply::heatmaply("Rowv")}
+#'   See more at `heatmaply::heatmaply("Rowv")`
 #' @param Colv Logical or dendrogram.
 #'   If Logical: Compute dendrogram and reorder columns. Defaults to FALSE
 #'   If dendrogram: use as is, without reordering
-#'   See more at \code{heatmaply::heatmaply("Colv")}
-#' @param cluster Logical: If TRUE, set \code{Rowv} and \code{Colv} to TRUE
-#' @param symm Logical: If TRUE, treat \code{x} symmetrically - \code{x} must be a square matrix. Default = FALSE
-#' @param cellnote Matrix with values to be desplayed on hover. Defaults to \code{ddSci(z)}
+#'   See more at `heatmaply::heatmaply("Colv")`
+#' @param cluster Logical: If TRUE, set `Rowv` and `Colv` to TRUE
+#' @param symm Logical: If TRUE, treat `x` symmetrically - `x` must be a square matrix. Default = FALSE
+#' @param cellnote Matrix with values to be desplayed on hover. Defaults to `ddSci(z)`
 #' @param k.row Integer: Number of desired number of groups by which to color dendrogram branches in the rows.
-#' Default = NA (determined automatically). See \code{heatmaply::heatmaply("k_row")}
+#' Default = NA (determined automatically). See `heatmaply::heatmaply("k_row")`
 #' @param k.col Integer: Number of desired number of groups by which to color dendrogram branches in the columns.
-#' Default = NA (determined automatically). See \code{heatmaply::heatmaply("k_col")}
+#' Default = NA (determined automatically). See `heatmaply::heatmaply("k_col")`
 #' @param grid.gap Integer: Space between cells. Default = 0 (no space)
 #' @param limits Float, length 2: Determine color range. Default = NULL, which automatically centers values around 0
 #' @param margins Float, length 4: Heatmap margins. Default = c(30, 30, 30, 30)
 #' @param key.title String: Title for the color key. Default = NULL (no title)
-#' @param ... Additional arguments to be passed to \code{heatmaply::heatmaply}
+#' @param ... Additional arguments to be passed to `heatmaply::heatmaply`
 #' @author Efstathios D. Gennatas
 #' @export
 

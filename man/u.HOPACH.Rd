@@ -18,9 +18,9 @@ If NULL}
 
 \item{K}{Integer, (0:15]: Maximum number of levels}
 
-\item{kmax}{Integer, [1:9]: Maximum number of children at each node in the tree}
+\item{kmax}{Integer, \link{1:9}: Maximum number of children at each node in the tree}
 
-\item{khigh}{Integer, [1:9]: Maximum number of children at each nod ein the tree when computing the
+\item{khigh}{Integer, \link{1:9}: Maximum number of children at each nod ein the tree when computing the
 the Mean/Median Split Silhouette. Usually same as \code{kmax}}
 
 \item{verbose}{Logical: If TRUE, print messages to screen}

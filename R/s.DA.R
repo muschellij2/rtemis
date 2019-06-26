@@ -4,13 +4,13 @@
 
 #' Linear and Quadratic Discriminant Analysis [C]
 #'
-#' Train a DA Classifier using \code{MASS::lda} or \code{MASS::qda}
+#' Train a DA Classifier using `MASS::lda` or `MASS::qda`
 #'
 #' Note: Does not support case weights
 #' @inheritParams s.GLM
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 
@@ -164,7 +164,7 @@ s.DA <- function(x, y = NULL,
 
 #' Linear Discriminant Analysis
 #'
-#' alias for \code{s.DA(da.type = "lin")}
+#' alias for `s.DA(da.type = "lin")`
 #'
 #' @inheritParams s.DA
 #' @export
@@ -208,7 +208,7 @@ s.LDA <- function(x, y,
 
 #' Quadratic Discriminant Analysis
 #'
-#' alias for \code{s.DA(da.type = "quad")}
+#' alias for `s.DA(da.type = "quad")`
 #'
 #' @inheritParams s.DA
 #' @export

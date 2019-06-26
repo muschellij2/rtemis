@@ -72,7 +72,7 @@ d.H2OGLRM(x, x.test = NULL, x.valid = NULL, k = 3,
 \description{
 Perform GLRM decomposition using \code{h2o::h2o.glrm}
 Given Input matrix \code{A}:
-\code{ A(m x n) = X(m x k) \%*\% Y(k x n) }
+\code{A(m x n) = X(m x k) \\\%*\\\% Y(k x n)}
 }
 \details{
 Learn more about GLRM from the H2O tutorial

@@ -3,7 +3,7 @@
 # 2018 Efstathios D. Gennatas egenn.github.io
 # https://mxnet.incubator.apache.org/tutorials/r/classifyRealImageWithPretrainedModel.html
 
-#' Classify Images using pre-trained Inception network with \code{mxnet} [C]
+#' Classify Images using pre-trained Inception network with `mxnet` [C]
 #'
 #' Predict using Inception
 #'

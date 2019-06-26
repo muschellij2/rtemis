@@ -7,7 +7,7 @@
 #' @field parameters List of hyperparameters used when building model
 #' @field error.train Training error
 #' @field error.test Testing error
-#' @field sessionInfo The output of \code{sessionInfo()} at the time the model was trained
+#' @field sessionInfo The output of `sessionInfo()` at the time the model was trained
 #' @author Efstathios D. Gennatas
 #' @export
 

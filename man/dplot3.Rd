@@ -89,7 +89,7 @@ Default = "circle"}
 
 \item{showlegend}{Logical: If TRUE, show legends}
 
-\item{legend.xy}{Vector, length 2 [0, 1]: x, y coordinates of legend. 0 means left and bottom for x and y axis
+\item{legend.xy}{Vector, length 2 \link{0, 1}: x, y coordinates of legend. 0 means left and bottom for x and y axis
 respectively; 1 means right and top. Default = c(0, 1) (i.e. top-left)}
 
 \item{axes.square}{Logical: If TRUE, make axes square}

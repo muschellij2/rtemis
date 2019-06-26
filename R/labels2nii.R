@@ -9,7 +9,7 @@
 #' @param label.vals Vector: The index of this vector should correspond to label numbers.
 #'   Its values will replace the corresponding label numbers to form the new nifti file.
 #' @param labeledNifti String: Path to the labeled file whose labels corresponds to the values in
-#'   \code{label.vals}
+#'   `label.vals`
 #' @param prefix String: Prefix of the output file. ".nii.gz" will be added automatically
 # @param reorient.label Logical: If TRUE, enforce Qform/Sform transformations. See \code{oro.nifti::readNIfTI}
 #' @param datatype Integer or "auto": Defines the datatype of the output. Options:

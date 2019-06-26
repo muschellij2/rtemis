@@ -30,7 +30,7 @@ cases by features. Default = TRUE, if x inherits from class \code{dist}, FALSE o
 \item{do.swap}{Logical: If TRUE, perform the swap phase (See \code{cluster::pam}), as in the
 original PAM algorithm. This is computationally intensive and can be skipped. Default = TRUE}
 
-\item{trace}{Integer [0, 3]: Trace level for \code{fpc::pamk}}
+\item{trace}{Integer \link{0, 3}: Trace level for \code{fpc::pamk}}
 
 \item{verbose}{Logical: If TRUE, print messages to screen}
 

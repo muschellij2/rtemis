@@ -13,7 +13,7 @@ mplot3(x, y = NULL, type = NULL, fit = NULL, ...)
 
 \item{type}{String. "scatter", "density", "index", "heatmap"}
 
-\item{fit}{String. Any `rtemis` model, best to use "lm" for linear fits and "gam" for non-linear fits}
+\item{fit}{String. Any \code{rtemis} model, best to use "lm" for linear fits and "gam" for non-linear fits}
 
 \item{...}{Additional arguments to be passed to}
 }

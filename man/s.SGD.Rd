@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.SGD.R
 \name{s.SGD}
 \alias{s.SGD}
-\title{Stochastic Gradient Descent (SGD) [C, R]}
+\title{Stochastic Gradient Descent (SGD) \link{C, R}}
 \usage{
 s.SGD(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, model = NULL, model.control = list(lambda1 = 0,

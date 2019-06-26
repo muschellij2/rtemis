@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.DN.R
 \name{s.DN}
 \alias{s.DN}
-\title{Artificial Neural Network [C, R]}
+\title{Artificial Neural Network \link{C, R}}
 \usage{
 s.DN(x, y = NULL, x.test = NULL, y.test = NULL, weights = NULL,
   ipw = TRUE, ipw.type = 2, upsample = FALSE, upsample.seed = NULL,

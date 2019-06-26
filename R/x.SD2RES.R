@@ -9,9 +9,9 @@
 
 #' Sparse CCA with Initialization By Resampling
 #'
-#' Run sparse CCA on a pair of matrices using \code{ANTsR}
+#' Run sparse CCA on a pair of matrices using `ANTsR`
 #'
-#' This is based on \code{ANTsR::sparseDecom2boot} by Brian B. Avants
+#' This is based on `ANTsR::sparseDecom2boot` by Brian B. Avants
 #'
 #' @inheritParams resample
 #' @param x Input matrix
@@ -21,17 +21,17 @@
 #' @param k Integer: Number of axes to project to (i.e. number of resulting dimensions you require)
 #' @param sparseness Float, length 2: Required sparseness for each matrix.
 #'   Defaults to c(.01, 1)
-#' @param scale.first.x Logical: If TRUE, scale \code{x} before decomposition
-#' @param scale.first.center.x Logical: If TRUE, and \code{scale.first.x} is TRUE, also center \code{x}
+#' @param scale.first.x Logical: If TRUE, scale `x` before decomposition
+#' @param scale.first.center.x Logical: If TRUE, and `scale.first.x` is TRUE, also center `x`
 #' @param scale.first z Logical: See above
 #' @param scale.first.center.z Logical: See above
-#' @param resampler Resampling method to use  (with \link{resample})#' @param
+#' @param resampler Resampling method to use  (with [resample])#' @param
 #' @param its Integer: Number of iterations for ANTsR decomposition
 #' @param cthresh Integer, pair: Cluster threshold for ANTsR decomposition. Used for voxerlwise data
 #'   Default = c(0, 0), which should be used for ROI data
 #' @param perms Integer: Number of permutations for ANTsR decomposition
 #' @param uselong Logical, binary: If 1, enforce solutions on each side to be the same. Default = 0.
-#'   See \code{ANTsR::sparseDecom2("uselong")}
+#'   See `ANTsR::sparseDecom2("uselong")`
 #' @param row.sparseness Float (0, 1]: subject / case-space sparseness
 #' @param smooth Float: Smooth the data (only if mask is provided). Default = 0
 #' @param robust Logical, binary: If 1, Rank-transform input matrices. Default = 0

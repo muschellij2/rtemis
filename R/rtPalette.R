@@ -5,7 +5,7 @@
 # Penn ====
 #' rtemis Color Palettes
 #'
-#' \code{pennCol}: Penn color palette (http://www.upenn.edu/about/styleguide-color-type)
+#' `pennCol`: Penn color palette (http://www.upenn.edu/about/styleguide-color-type)
 #' @name rtPalettes
 #' @export
 
@@ -41,7 +41,7 @@ pennCol <- list(darkestBlue = "#000f3a",
                 lightestPurple = "#c480c1")
 
 
-#' \code{pennPalette}: Subset of \code{pennCol}. This is the default palette of the \link{mplot3} family
+#' `pennPalette`: Subset of `pennCol`. This is the default palette of the [mplot3] family
 #'
 #' @name rtPalettes
 #' @export
@@ -49,7 +49,7 @@ pennPalette <- pennCol[c("lighterBlue", "red", "green", "yellow", "lighterPurple
                          "lightestBlue", "lighterRed", "lighterGreen", "lightestPurple",
                          "lighterOrange")]
 
-#' \code{pennLightPalette}: Subset of \code{pennCol}. This is the lighter Penn palette for use with the dark themes
+#' `pennLightPalette`: Subset of `pennCol`. This is the lighter Penn palette for use with the dark themes
 #' @name rtPalettes
 #' @export
 pennLightPalette <- pennCol[c("lightestBlue", "lightestRed", "lightestGreen",
@@ -59,7 +59,7 @@ pennLightPalette <- pennCol[c("lightestBlue", "lightestRed", "lightestGreen",
 # Imperial ====
 #' Imperial Colors
 #'
-#' \code{imperialCol}: Imperial College London color palette (https://www.imperial.ac.uk/brand-style-guide/visual-identity/brand-colours/)
+#' `imperialCol`: Imperial College London color palette (https://www.imperial.ac.uk/brand-style-guide/visual-identity/brand-colours/)
 #'
 #' @name rtPalettes
 #' @export
@@ -94,7 +94,7 @@ imperialCol <- list(navy = "#002147",
 # UCSF ====
 #' UCSF Colors
 #'
-#' \code{ucsfCol}: UCSF color palette (http://identity.ucsf.edu/color)
+#' `ucsfCol`: UCSF color palette (http://identity.ucsf.edu/color)
 #'
 #' @name rtPalettes
 #' @export
@@ -114,7 +114,7 @@ ucsfCol <- list(navy = "#052049",
 
 #' UCSF Color Palette
 #'
-#' \code{ucsfPalette}: Subset of \code{ucsfCol} for use with \link{mplot3}, etc
+#' `ucsfPalette`: Subset of `ucsfCol` for use with [mplot3], etc
 #'
 #' @name rtPalettes
 #' @export
@@ -125,7 +125,7 @@ ucsfPalette <- ucsfCol[c("teal", "orange", "blue", "yellow", "purple", "red", "n
 # Berkeley ====
 #' Berkeley Colors
 #'
-#' \code{berkeleyCol}: Berkeley color palette (https://brand.berkeley.edu/colors/)
+#' `berkeleyCol`: Berkeley color palette (https://brand.berkeley.edu/colors/)
 #'
 #' @name rtPalettes
 #' @export
@@ -153,7 +153,7 @@ berkeleyCol <- list(berkeleyBlue = "#003262",
 # Stanford ====
 #' Stanford Colors
 #'
-#' \code{stanfordCol}: Stanford color palette (https://identity.stanford.edu/color.html#digital-color)
+#' `stanfordCol`: Stanford color palette (https://identity.stanford.edu/color.html#digital-color)
 #'
 #' @name rtPalettes
 #' @export
@@ -189,7 +189,7 @@ stanfordCol <- list(cardinal = "#8c1515",
 # USF ====
 #' USF Colors
 #'
-#' \code{usfCol}: USF color palette (https://myusf.usfca.edu/marketing-communications/resources/graphics-resources/brand-standards/color-palette)
+#' `usfCol`: USF color palette (https://myusf.usfca.edu/marketing-communications/resources/graphics-resources/brand-standards/color-palette)
 #' Color conversions performed using https://www.pantone.com/color-finder/
 #' @name rtPalettes
 #' @export
@@ -202,7 +202,7 @@ usfCol <- list(green = "#205C40",
 # UC San Diego ====
 #' UC San Diego Colors
 #'
-#' \code{ucsdCol}: UC San Diego color palette (https://ucpa.ucsd.edu/brand/elements/color-palette/)
+#' `ucsdCol`: UC San Diego color palette (https://ucpa.ucsd.edu/brand/elements/color-palette/)
 #' @name rtPalettes
 #' @export
 
@@ -222,7 +222,7 @@ ucsdCol <- list(blue = "#182B49",
 # UCLA ====
 #' UCLA Colors
 #'
-#' \code{uclaCol}: UCLA color palette (http://brand.ucla.edu/identity/colors)
+#' `uclaCol`: UCLA color palette (http://brand.ucla.edu/identity/colors)
 #' @name rtPalettes
 #' @export
 
@@ -244,7 +244,7 @@ uclaCol <- list(blue = "#2774AE",
 # University of California ====
 #' University of California Colors
 #'
-#' \code{ucCol}: University of California color palette
+#' `ucCol`: University of California color palette
 #' (http://brand.universityofcalifornia.edu/guidelines/color.html#!primary-colors)
 #' @name rtPalettes
 #' @export
@@ -271,7 +271,7 @@ ucCol <- list(ucBlue = "#1295D8",
 # Washington ====
 #' University of Washington Colors
 #'
-#' \code{uwCol}: University of Washington color palette
+#' `uwCol`: University of Washington color palette
 #' (http://www.washington.edu/brand/graphic-elements/primary-color-palette/)
 #' @name rtPalettes
 #' @export
@@ -284,7 +284,7 @@ uwCol <- list(purple = "#4b2e83",
 # NIH ====
 #' NIH Colors
 #'
-#' \code{nihCol}: NIH color palette (https://www.nlm.nih.gov/about/nlm_logo_guidelines_030414_508.pdf)
+#' `nihCol`: NIH color palette (https://www.nlm.nih.gov/about/nlm_logo_guidelines_030414_508.pdf)
 #' @name rtPalettes
 #' @export
 
@@ -295,7 +295,7 @@ nihCol <- list(blue = "#20558a",
 # Apple ====
 #' Apple Colors
 #'
-#' \code{appleCol}: Apple Human Interface Guidelines color palette
+#' `appleCol`: Apple Human Interface Guidelines color palette
 #' (https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)
 #' @name rtPalettes
 #' @export
@@ -313,7 +313,7 @@ appleCol <- list(red = "#FF3B30",
 # Google ====
 #' Google Colors
 #'
-#' \code{googleCol}: Google brand palette (https://brandpalettes.com/google-colors/)
+#' `googleCol`: Google brand palette (https://brandpalettes.com/google-colors/)
 #' @name rtPalettes
 #' @export
 
@@ -325,7 +325,7 @@ googleCol <- list(blue = "#4285F4",
 # Amazon ====
 #' Amazon Colors
 #'
-#' \code{amazonCol}: Amazon brand palette
+#' `amazonCol`: Amazon brand palette
 #' (https://images-na.ssl-images-amazon.com/images/G/01/AdvertisingSite/pdfs/AmazonBrandUsageGuidelines.pdf)
 #' @name rtPalettes
 #' @export
@@ -337,7 +337,7 @@ amazonCol <- list(orange = "#FF9900",
 # Microsoft ====
 #' Microsoft Colors
 #'
-#' \code{microsoftCol}: Microsoft brand palette
+#' `microsoftCol`: Microsoft brand palette
 #' (https://brandcolors.net/b/microsoft)
 #' @name rtPalettes
 #' @export
@@ -417,7 +417,7 @@ rtPalettes <- list(rtCol = rtCol,
 
 #' \pkg{rtemis} Color Palettes
 #'
-#' \code{rtPalettes} prints names of available color palettes
+#' `rtPalettes` prints names of available color palettes
 #' Each palette is a named list of hexadecimal color definitions which can be used with any
 #' graphics function.
 #' @param palette String: Name of palette to return. Default = NULL: available palette names

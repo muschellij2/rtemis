@@ -7,23 +7,23 @@
 # When specifying zlim, make values below zlim[1] same color as zlim[1] and values above zlim[2]
 # same color as zlim[2]
 
-#' \code{mplot3} Heatmap (\code{image}; modified \code{heatmap})
+#' `mplot3` Heatmap (`image`; modified `heatmap`)
 #'
 #' Customized heatmap with optional colorbar
 #'
-#' The main difference from the original \code{heatmap} is the addition of a colorbar on the side.
-#' This is achieved with \link{colorGrad}.
+#' The main difference from the original `heatmap` is the addition of a colorbar on the side.
+#' This is achieved with [colorGrad].
 #' Other differences:
-#' - Dendrograms are not drawn by default. Set \code{Rowv = T} and \code{Colv = T} to get them.
+#' - Dendrograms are not drawn by default. Set `Rowv = T` and `Colv = T` to get them.
 #' - Column labels are only drawn perpendicular to the x-axis if any one is
 #'   longer than two characters.
 #'
-#' @param colorGrad.n Integer. Number of distinct colors to generate using \link{colorGrad}
-#' @param colorGrad.col Color. See \link{colorGrad}
+#' @param colorGrad.n Integer. Number of distinct colors to generate using [colorGrad]
+#' @param colorGrad.col Color. See [colorGrad]
 #' @param colorbar Logical. Should colorbar appear next to heatmap?
 #' @param cb.n Integer. Number of steps in colorbar. 21 gives 10 above and 10 below midline.
 #'   If midline is zero, this corresponds to 10 percent increments / decrements
-#' @author Efstathios D Gennatas modified from original \code{stats::heatmap}
+#' @author Efstathios D Gennatas modified from original `stats::heatmap`
 #' by Andy Liaw, R. Gentleman, M. Maechler, W. Huber
 #' @export
 

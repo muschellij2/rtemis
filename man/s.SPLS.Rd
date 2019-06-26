@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.SPLS.R
 \name{s.SPLS}
 \alias{s.SPLS}
-\title{Sparse Partial Least Squares Regression [C, R]}
+\title{Sparse Partial Least Squares Regression \link{C, R}}
 \usage{
 s.SPLS(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, k = 2, eta = 0.5, kappa = 0.5, select = "pls2",
@@ -31,23 +31,23 @@ Columns must correspond to columns in \code{x}}
 
 \item{y.name}{Character: Name for outcome}
 
-\item{k}{[gS] Integer: Number of components to estimate. Default = 2}
+\item{k}{\link{gS} Integer: Number of components to estimate. Default = 2}
 
-\item{eta}{[gS] Float [0, 1): Thresholding parameter. Default = .5}
+\item{eta}{\link{gS} Float [0, 1): Thresholding parameter. Default = .5}
 
-\item{kappa}{[gS] Float [0, .5]: Only relevant for multivariate responses: controls effect of concavity of objective
+\item{kappa}{\link{gS} Float \link{0, .5}: Only relevant for multivariate responses: controls effect of concavity of objective
 function. Default = .5}
 
-\item{select}{[gS] String: "pls2", "simpls". PLS algorithm for variable selection. Default = "pls2"}
+\item{select}{\link{gS} String: "pls2", "simpls". PLS algorithm for variable selection. Default = "pls2"}
 
-\item{fit}{[gS] String: "kernelpls", "widekernelpls", "simpls", "oscorespls". Algorithm for model fitting.
+\item{fit}{\link{gS} String: "kernelpls", "widekernelpls", "simpls", "oscorespls". Algorithm for model fitting.
 Default = "simpls"}
 
 \item{scale.x}{Logical: if TRUE, scale features by dividing each column by its sample standard deviation}
 
 \item{scale.y}{Logical: if TRUE, scale outcomes by dividing each column by its sample standard deviation}
 
-\item{maxstep}{[gS] Integer: Maximum number of iteration when fitting direction vectors. Default = 100}
+\item{maxstep}{\link{gS} Integer: Maximum number of iteration when fitting direction vectors. Default = 100}
 
 \item{classifier}{String: Classifier used by \code{spls::splsda} "lda" or "logistic": Default = "lda"}
 
@@ -100,7 +100,7 @@ Object of class \pkg{rtemis}
 Train an SPLS model using \code{spls::spls} (Regression) and \code{spls::splsda} (Classification)
 }
 \details{
-[gS] denotes argument can be passed as a vector of values, which will trigger a grid search using \link{gridSearchLearn}
+\link{gS} denotes argument can be passed as a vector of values, which will trigger a grid search using \link{gridSearchLearn}
 \code{np::npreg} allows inputs with mixed data types.
 }
 \examples{

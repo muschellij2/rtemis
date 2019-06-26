@@ -4,18 +4,18 @@
 
 #' Principal Component Analysis
 #'
-#' Perform PCA decomposition using \code{stats::prcomp}
+#' Perform PCA decomposition using `stats::prcomp`
 #'
-#' Same solution as \link{d.SVD}. d.PCA runs \code{prcomp}, which has useful
-#' \code{summary} output
+#' Same solution as [d.SVD]. d.PCA runs `prcomp`, which has useful
+#' `summary` output
 #'
 #' @inheritParams d.SVD
 #' @param x Input matrix
 #' @param x.test Optional test set. Will be projected on to PCA basis
 #' @param scale Logical: If TRUE, scale input data before doing SVD
-#' @param center Logical: If TRUE, also center input data if \code{scale} is \code{TRUE}
-#' @param ... Additional parameters to be passed to \code{PCA::PCA}
-#' @return \link{rtDecom} object
+#' @param center Logical: If TRUE, also center input data if `scale` is `TRUE`
+#' @param ... Additional parameters to be passed to `PCA::PCA`
+#' @return [rtDecom] object
 #' @author Efstathios D. Gennatas
 #' @family Decomposition
 #' @export

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.MXN.R
 \name{s.MXN}
 \alias{s.MXN}
-\title{Neural Network with \code{mxnet} [C, R]}
+\title{Neural Network with \code{mxnet} \link{C, R}}
 \usage{
 s.MXN(x, y = NULL, x.test = NULL, y.test = NULL, x.valid = NULL,
   y.valid = NULL, upsample = FALSE, upsample.seed = NULL,

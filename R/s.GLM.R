@@ -4,34 +4,34 @@
 
 #' Generalized Linear Model [C, R]
 #'
-#' Train a Generalized Linear Model for Regression or Classification (i.e. Logistic Regression) using \code{stats::glm}.
-#' If outcome \code{y} has more than two classes, Multinomial Logistic Regression is performed using
-#' \code{nnet::multinom}
+#' Train a Generalized Linear Model for Regression or Classification (i.e. Logistic Regression) using `stats::glm`.
+#' If outcome `y` has more than two classes, Multinomial Logistic Regression is performed using
+#' `nnet::multinom`
 #'
-#' A common problem with \code{glm} arises when the testing set containts a predictor with more
+#' A common problem with `glm` arises when the testing set containts a predictor with more
 #' levels than those in the same predictor in the training set, resulting in error. This can happen
 #' when training on resamples of a data set, especially after stratifying against a different
-#' outcome, and results in error and no prediction. \code{s.GLM} automatically finds such cases
-#' and substitutes levels present in \code{x.test} and not in \code{x} with NA.
+#' outcome, and results in error and no prediction. `s.GLM` automatically finds such cases
+#' and substitutes levels present in `x.test` and not in `x` with NA.
 #'
 #' @param x Numeric vector or matrix / data frame of features i.e. independent variables
 #' @param y Numeric vector of outcome, i.e. dependent variable
 #' @param x.test Numeric vector or matrix / data frame of testing set features
-#'   Columns must correspond to columns in \code{x}
+#'   Columns must correspond to columns in `x`
 #' @param y.test Numeric vector of testing set outcome
-#' @param family Error distribution and link function. See \code{stats::family}
+#' @param family Error distribution and link function. See `stats::family`
 #' @param covariate String: Name of column to be included as interaction term in formula, must be factor
 #' @param x.name Character: Name for feature set
 #' @param y.name Character: Name for outcome
-#' @param interactions Logical: If TRUE, include all pairwise interactions. \code{formula = y ~.*.}
-#' @param nway.interactions Integer: Include n-way interactions. This integer defined the n: \code{formula = y ~^n}
+#' @param interactions Logical: If TRUE, include all pairwise interactions. `formula = y ~.*.`
+#' @param nway.interactions Integer: Include n-way interactions. This integer defined the n: `formula = y ~^n`
 #' @param class.method String: Define "logistic" or "multinom" for classification. The only purpose
-#' of this is so you can try \code{nnet::multinom} instead of glm for binary classification
-#' @param weights Numeric vector: Weights for cases. For classification, \code{weights} takes precedence
-#' over \code{ipw}, therefore set \code{weights = NULL} if using \code{ipw}.
-#' Note: If \code{weight} are provided, \code{ipw} is not used. Leave NULL if setting \code{ipw = TRUE}. Default = NULL
+#' of this is so you can try `nnet::multinom` instead of glm for binary classification
+#' @param weights Numeric vector: Weights for cases. For classification, `weights` takes precedence
+#' over `ipw`, therefore set `weights = NULL` if using `ipw`.
+#' Note: If `weight` are provided, `ipw` is not used. Leave NULL if setting `ipw = TRUE`. Default = NULL
 #' @param ipw Logical: If TRUE, apply inverse probability weighting (for Classification only).
-#' Note: If \code{weights} are provided, \code{ipw} is not used. Default = TRUE
+#' Note: If `weights` are provided, `ipw` is not used. Default = TRUE
 #' @param ipw.type Integer {0, 1, 2}
 #" 0: class.weights = 1 / (class.frequencies/sum(class.frequencies))
 #' 1: class.weights as in 0, divided by max(class.weights)
@@ -43,38 +43,38 @@
 #' @param upsample.seed Integer: If provided, will be used to set the seed during upsampling.
 #' Default = NULL (random seed)
 #' @param intercept Logical: If TRUE, fit an intercept term. Default = TRUE
-#' @param polynomial Logical: if TRUE, run lm on \code{poly(x, poly.d)} (creates orthogonal polynomials)
+#' @param polynomial Logical: if TRUE, run lm on `poly(x, poly.d)` (creates orthogonal polynomials)
 #' @param poly.d Integer: degree of polynomial. Default = 3
 #' @param poly.raw Logical: if TRUE, use raw polynomials.
 #'   Default, which should not really be changed is FALSE
-#' @param print.plot Logical: if TRUE, produce plot using \code{mplot3}
-#'   Takes precedence over \code{plot.fitted} and \code{plot.predicted}
+#' @param print.plot Logical: if TRUE, produce plot using `mplot3`
+#'   Takes precedence over `plot.fitted` and `plot.predicted`
 #' @param plot.fitted Logical: if TRUE, plot True (y) vs Fitted
 #' @param plot.predicted Logical: if TRUE, plot True (y.test) vs Predicted.
-#'   Requires \code{x.test} and \code{y.test}
+#'   Requires `x.test` and `y.test`
 #' @param plot.theme String: "zero", "dark", "box", "darkbox"
-#' @param na.action How to handle missing values. See \code{?na.fail}
-#' @param removeMissingLevels Logical: If TRUE, finds factors in \code{x.test} that contain levels
-#' not present in \code{x} and substitutes with NA. This would result in error otherwise and no
-#' predictions would be made, ending \code{s.GLM} prematurely
+#' @param na.action How to handle missing values. See `?na.fail`
+#' @param removeMissingLevels Logical: If TRUE, finds factors in `x.test` that contain levels
+#' not present in `x` and substitutes with NA. This would result in error otherwise and no
+#' predictions would be made, ending `s.GLM` prematurely
 #' @param question String: the question you are attempting to answer with this model, in plain language.
 #' @param rtclass String: Class type to use. "S3", "S4", "RC", "R6"
 #' @param verbose Logical: If TRUE, print summary to screen.
 #' @param trace Integer: If higher than 0, will print more information to the console. Default = 0
 #' @param outdir Path to output directory.
 #'   If defined, will save Predicted vs. True plot, if available,
-#'   as well as full model output, if \code{save.mod} is TRUE
-#' @param save.mod Logical. If TRUE, save all output as RDS file in \code{outdir}
-#'   \code{save.mod} is TRUE by default if an \code{outdir} is defined. If set to TRUE, and no \code{outdir}
-#'   is defined, outdir defaults to \code{paste0("./s.", mod.name)}
+#'   as well as full model output, if `save.mod` is TRUE
+#' @param save.mod Logical. If TRUE, save all output as RDS file in `outdir`
+#'   `save.mod` is TRUE by default if an `outdir` is defined. If set to TRUE, and no `outdir`
+#'   is defined, outdir defaults to `paste0("./s.", mod.name)`
 #' @param ... Additional arguments
-#' @return \link{rtMod}
+#' @return [rtMod]
 #' @examples
 #' x <- rnorm(100)
 #' y <- .6 * x + 12 + rnorm(100)/2
 #' mod <- s.GLM(x, y)
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Interpretable models
 #' @export
@@ -339,7 +339,7 @@ s.GLM <- function(x, y = NULL,
 
 #' Logistic Regression
 #'
-#' Convenience alias for \code{s.GLM(family = binomial(link = "logit"))}.
+#' Convenience alias for `s.GLM(family = binomial(link = "logit"))`.
 #' @inheritParams s.GLM
 #' @export
 s.LOGISTIC <- function(x, y, x.test = NULL, y.test = NULL,
@@ -352,7 +352,7 @@ s.LOGISTIC <- function(x, y, x.test = NULL, y.test = NULL,
 
 #' Multinomial Logistic Regression
 #'
-#' Convenience alias for \code{s.GLM(class.method = "multinom")}.
+#' Convenience alias for `s.GLM(class.method = "multinom")`.
 #' @inheritParams s.GLM
 #' @export
 s.MULTINOM <- function(x, y, x.test = NULL, y.test = NULL,
@@ -365,12 +365,12 @@ s.MULTINOM <- function(x, y, x.test = NULL, y.test = NULL,
 
 #' Polynomial Regression
 #'
-#' Convenience alias for \code{s.LM(polynomial = T)}.
-#'   Substitutes all features with \code{poly(x, poly.d)}
+#' Convenience alias for `s.LM(polynomial = T)`.
+#'   Substitutes all features with `poly(x, poly.d)`
 #' @inheritParams s.GLM
 #' @param poly.d Integer: degree of polynomial(s) to use
 #' @param poly.raw Logical: if TRUE, use raw polynomials. Defaults to FALSE, resulting in
-#'   orthogonal polynomials. See \code{stats::poly}
+#'   orthogonal polynomials. See `stats::poly`
 #' @export
 
 s.POLY <- function(x, y, x.test = NULL, y.test = NULL, poly.d = 3, poly.raw = FALSE, ...) {
@@ -383,12 +383,12 @@ s.POLY <- function(x, y, x.test = NULL, y.test = NULL, poly.d = 3, poly.raw = FA
 #'
 #' #' Generalized Least Squares
 #' #'
-#' #' Convenience alias for \code{s.GLM(gls = TRUE)}. Uses \code{nlme::gls}
+#' #' Convenience alias for `s.GLM(gls = TRUE)`. Uses `nlme::gls`
 #' #'
 #' #' GLS can be useful in place of a standard linear model, when there is correlation among
 #' #'   the residuals
 #' #' @inheritParams s.GLM
-#' #' @param ... Additional parameters to be passed to \code{nlme::gls}
+#' #' @param ... Additional parameters to be passed to `nlme::gls`
 #' #' @export
 #'
 #' s.GLS <- function(x, y = NULL, x.test = NULL, y.test = NULL, ...) {

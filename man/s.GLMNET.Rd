@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.GLMNET.R
 \name{s.GLMNET}
 \alias{s.GLMNET}
-\title{GLM with Elastic Net Regularization [C, R, S]}
+\title{GLM with Elastic Net Regularization \link{C, R, S}}
 \usage{
 s.GLMNET(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, grid.resample.rtset = rtset.resample("kfold", 5),
@@ -47,7 +47,7 @@ combinations. Default = .1}
 
 \item{family}{Error distribution and link function. See \code{stats::family}}
 
-\item{alpha}{Float [0, 1]: The elasticnet mixing parameter:
+\item{alpha}{Float \link{0, 1}: The elasticnet mixing parameter:
 \code{a = 0} is the ridge penalty, \code{a = 1} is the lasso penalty}
 
 \item{lambda}{Float vector: Best left to NULL, \code{cv.glmnet} will compute its own lambda sequence}

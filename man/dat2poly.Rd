@@ -21,7 +21,7 @@ dat2poly(dat, method = c("simple", "poly"), degree = 2, raw = FALSE,
 }
 \description{
 This is a convenience function that will take each column of the input and calculate 1:degree powers and concatenate
-into a data.frame of dimensions `n * (degree * p)` given an `n * p` input
+into a data.frame of dimensions \code{n * (degree * p)} given an \code{n * p} input
 }
 \author{
 Efstathios D. Gennatas

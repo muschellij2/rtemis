@@ -6,12 +6,12 @@
 #' 
 #' Concatenate that maintains factors
 #'
-#' A \code{c()} replacement that maintains factors as factors because it doesn't make sense not to.
+#' A `c()` replacement that maintains factors as factors because it doesn't make sense not to.
 #' If all inputs are factors, they are converted to character, concatenated and converted to factor again.
-#' Otherwise, they are passed to \code{c()}
+#' Otherwise, they are passed to `c()`
 #'
 #' @param ... Two or more vectors of any type
-#' @return Concatenation of \code{...}
+#' @return Concatenation of `...`
 #' @author Efstathios D. Gennatas
 #' @export
 

@@ -2,13 +2,13 @@
 # ::rtemis::
 # 2018 Efstathios D. Gennatas
 
-#' \code{rtemis-internals}: Convert rules from cutoffs to median/mode and range
+#' `rtemis-internals`: Convert rules from cutoffs to median/mode and range
 #'
-#' Convert rules from cutoffs to \code{median (range)} and \code{mode (range)} format
+#' Convert rules from cutoffs to `median (range)` and `mode (range)` format
 #'
 #' @param rules String, vector: Input rules
 #' @param x Data frame: Data to evaluate rules
-#' @param .ddSci Logical: If TRUE, format all continuous variables using \link{ddSci}, which will
+#' @param .ddSci Logical: If TRUE, format all continuous variables using [ddSci], which will
 #' give either 2 decimal places, or scientific notation if two decimal places result in 0.00
 #' @author Efstathios D. Gennatas
 #' @export

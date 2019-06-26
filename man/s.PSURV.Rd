@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.PSURV.R
 \name{s.PSURV}
 \alias{s.PSURV}
-\title{Parametric Survival Regression [S]}
+\title{Parametric Survival Regression \link{S}}
 \usage{
 s.PSURV(x, y, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, weights = NULL, dist = "weibull",

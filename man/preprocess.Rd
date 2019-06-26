@@ -45,16 +45,16 @@ cases. Default = NULL}
 \item{impute}{Logical: If TRUE, impute missing cases. See \code{impute.discrete} and
 \code{impute.numeric} for how}
 
-\item{impute.discrete}{Function that returns single value: How to impute discrete variables for 
+\item{impute.discrete}{Function that returns single value: How to impute discrete variables for
 \code{impute.type = "meanMode"}. Default = \link{getMode}}
 
-\item{impute.numeric}{Function that returns single value: How to impute continuous variables for 
+\item{impute.numeric}{Function that returns single value: How to impute continuous variables for
 \code{impute.type = "meanMode"}.
 Default = \code{mean}}
 
 \item{integer2factor}{Logical: If TRUE, convert all integers to factors}
 
-\item{integer2numeric}{Logical: If TRUE, convert all integers to numeric (will only work 
+\item{integer2numeric}{Logical: If TRUE, convert all integers to numeric (will only work
 if \code{integer2factor = FALSE})}
 
 \item{nonzeroFactors}{Logical: Shift factor values to exclude zeros. Default = FALSE}
@@ -78,14 +78,16 @@ Prepare data for data analysis
 By default, only removes constant features, everything else can be specified.
 
 Order of operations:
-  * completeCases
-  * removeCases.thres
-  * removeFeatures.thres
-  * integer2factor
-  * nonzeroFactors
-  * impute
-  * scale/center
-  * removeConstant
+\itemize{
+\item completeCases
+\item removeCases.thres
+\item removeFeatures.thres
+\item integer2factor
+\item nonzeroFactors
+\item impute
+\item scale/center
+\item removeConstant
+}
 }
 \author{
 Efstathios D. Gennatas

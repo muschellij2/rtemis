@@ -7,34 +7,34 @@
 #'
 #' Train models using a combination of parameter values for model selection
 #'
-#' Note that weights, if defined (and not NULL), should be passed directly to \code{gridSearchLearn}
-#' as they need to be resampled along \code{x} and \code{y}, and should not be passed along with
-#' \code{grid.params}. \code{ipw} and \code{ipw.type} should be passed as part of \code{grid.params}
+#' Note that weights, if defined (and not NULL), should be passed directly to `gridSearchLearn`
+#' as they need to be resampled along `x` and `y`, and should not be passed along with
+#' `grid.params`. `ipw` and `ipw.type` should be passed as part of `grid.params`
 #' and will be passed on to the learner.
-#' Includes a special case for training \link{s.H2OGBM} or \link{s.GBM} which requires extracting and averaging n.trees
+#' Includes a special case for training [s.H2OGBM] or [s.GBM] which requires extracting and averaging n.trees
 #' along with params.
 #'
 #' @param x features - training set. Will be resampled to multiple train-test sets
 #' @param y outcome - training set. Will be resampled to multiple train-test sets
-#' @param mod String: \pkg{rtemis} model. See \code{modSelect()} gives available models
+#' @param mod String: \pkg{rtemis} model. See `modSelect()` gives available models
 #' @param grid.params List of named elements, each is a vector of values
 #' @param fixed.params List of named elements, each is a single value
 #'   (Classification will always maximize Accuracy)
 #' @param search.type String: "exhaustive" (Default), "randomized". Type of grid search to use. Exhaustive search will
-#' try all combinations of parameters. Randomized will try a random sample of size \code{randomize.p} * N
+#' try all combinations of parameters. Randomized will try a random sample of size `randomize.p` * N
 #' of all combinations
-#' @param resample.rtset List: Output of \code{rtset.grid.resample()}
-#' @param randomized.p Float (0, 1): For \code{search.type == "exhaustive"}, sample this portion of combination. Default = .05
+#' @param resample.rtset List: Output of `rtset.grid.resample()`
+#' @param randomized.p Float (0, 1): For `search.type == "exhaustive"`, sample this portion of combination. Default = .05
 #' @param weights Float, vector: Case weights
 #' @param error.aggregate.fn Function: Use this when aggregating error metrics. Default = mean
 #' @param metric String: Metric to minimize or maximize
-#' @param maximize Logical: If TRUE, maximize \code{metric}
+#' @param maximize Logical: If TRUE, maximize `metric`
 #' @param save.mod Logical: If TRUE, save all trained models. Default = FALSE
 #' @param verbose Logical: If TRUE, print messages to screen
-#' @param call.depth Integer: passed to \link{msg}. Default = 2
-#' @param grid.verbose Logical: Passed to \code{learner}'s \code{verbose} argument
+#' @param call.depth Integer: passed to [msg]. Default = 2
+#' @param grid.verbose Logical: Passed to `learner`'s `verbose` argument
 #' @param n.cores Integer: Number of cores to use
-#' @param ... Additional arguments to be passed to \link{resample}
+#' @param ... Additional arguments to be passed to [resample]
 #'
 #' @author Efstathios D. Gennatas
 #' @keywords internal
@@ -252,11 +252,11 @@ gridSearchLearn <- function(x, y, mod,
 #' Checks if grid search needs to be performed.
 #' All tunable parameters should be passed to this function, individually or as a list. If any
 #' argument has more than one assigned values, the function returns TRUE, otherwise FALSE. This can
-#' be used to check whether \link{gridSearchLearn} must be run.
+#' be used to check whether [gridSearchLearn] must be run.
 #'
 #' The idea is that if you know which parameter values you want to use, you define them
-#'   e.g. \code{alpha = 0, lambda = .2}. If you don't know, you enter the set of values to be tested,
-#'   e.g. \code{alpha = c(0, .5, 1), lambda = seq(.1, 1, .1)}.
+#'   e.g. `alpha = 0, lambda = .2`. If you don't know, you enter the set of values to be tested,
+#'   e.g. `alpha = c(0, .5, 1), lambda = seq(.1, 1, .1)`.
 #' @param ... Parameters; will be converted to a list
 
 gridCheck <- function(...) {
@@ -267,7 +267,7 @@ gridCheck <- function(...) {
 } # rtemis::gridCheck
 
 
-#' \code{print} method for \code{gridSearch} object
+#' `print` method for `gridSearch` object
 #'
 #' @method print gridSearch
 #' @export

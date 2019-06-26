@@ -10,10 +10,10 @@
 #' predicting modeling. This functions aims to make data type conversions in those cases easier.
 #'
 #' @param x data frame: input whose columns' types you want to edit
-#' @param factor.index Integer, vector: Index of columns to be converted to factors using \code{factor(x)}
+#' @param factor.index Integer, vector: Index of columns to be converted to factors using `factor(x)`
 #' @param orderedfactor.index Integer, vector: Index of columns to be converted to ordered factors
-#' using \code{factor(x, ordered = TRUE)}
-#' @param integer.index Integer, vector: Index of columns to be converted to integers using \code{as.integer}
+#' using `factor(x, ordered = TRUE)`
+#' @param integer.index Integer, vector: Index of columns to be converted to integers using `as.integer`
 #' @author Efstathios D. Gennatas
 #' @export
 

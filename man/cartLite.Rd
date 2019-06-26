@@ -17,14 +17,14 @@ cartLite(x, y, weights = NULL, minsplit = 2, minbucket = 1, cp = 0,
 over \code{ipw}, therefore set \code{weights = NULL} if using \code{ipw}.
 Note: If \code{weight} are provided, \code{ipw} is not used. Leave NULL if setting \code{ipw = TRUE}. Default = NULL}
 
-\item{minsplit}{[gS] Integer: Minimum number of cases that must belong in a node before considering a split.
+\item{minsplit}{\link{gS} Integer: Minimum number of cases that must belong in a node before considering a split.
 Default = 2}
 
-\item{minbucket}{[gS] Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
+\item{minbucket}{\link{gS} Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
 
-\item{cp}{[gS] Float: Complexity threshold for allowing a split. Default = .01}
+\item{cp}{\link{gS} Float: Complexity threshold for allowing a split. Default = .01}
 
-\item{maxdepth}{[gS] Integer: Maximum depth of tree. Default = 20}
+\item{maxdepth}{\link{gS} Integer: Maximum depth of tree. Default = 20}
 
 \item{save.fitted}{Logical: If TRUE, save fitted values in output. Default = FALSE}
 }

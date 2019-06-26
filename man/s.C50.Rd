@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.C50.R
 \name{s.C50}
 \alias{s.C50}
-\title{C5.0 Decision Trees and Rule-Based Models [C]}
+\title{C5.0 Decision Trees and Rule-Based Models \link{C}}
 \usage{
 s.C50(x, y = NULL, x.test = NULL, y.test = NULL, trials = 10,
   rules = FALSE, weights = NULL, ipw = TRUE, ipw.type = 2,
@@ -23,7 +23,7 @@ Columns must correspond to columns in \code{x}}
 
 \item{y.test}{Numeric vector of testing set outcome}
 
-\item{trials}{Integer [1, 100]: Number of boosting iterations}
+\item{trials}{Integer \link{1, 100}: Number of boosting iterations}
 
 \item{rules}{Logical: If TRUE, decompose the tree to a rule-based model}
 
@@ -75,7 +75,7 @@ is defined, outdir defaults to \code{paste0("./s.", mod.name)}}
 \link{rtMod} object
 }
 \description{
-Train a C5.0 decision tree using `C50::C5.0`
+Train a C5.0 decision tree using \code{C50::C5.0}
 }
 \seealso{
 \link{elevate} for external cross-validation

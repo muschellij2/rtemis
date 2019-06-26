@@ -2,16 +2,16 @@
 # ::rtemis::
 # 2016 Efstathios D. Gennatas egenn.github.io
 
-#' XGBoost with linear booster (wrapper for \link{s.XGB})
+#' XGBoost with linear booster (wrapper for [s.XGB])
 #'
 #' Train an XGBoost learner with linear boosters
 #'
 #' [gS] denotes vector will trigger grid search
-#' Warning: Using \code{nthread > 1} may lower accuracy - test on your data
+#' Warning: Using `nthread > 1` may lower accuracy - test on your data
 #' @inheritParams s.XGB
-#' @param ... Additional arguments to be passed to \link{s.XGB}
+#' @param ... Additional arguments to be passed to [s.XGB]
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

@@ -20,7 +20,7 @@ labelify(x, underscoresToSpaces = TRUE, dotsToSpaces = TRUE,
 \item{capitalize.strings}{String, vector: Always capitalize these strings, if present. Default = "id"}
 
 \item{stringsToSpaces}{String, vector: Replace these strings with spaces. Escape as needed for \code{gsub}.
-Default = "\\$", which formats common input of the type \code{data.frame$variable}}
+Default = "\$", which formats common input of the type \code{data.frame$variable}}
 }
 \description{
 Convert text for label printing

@@ -22,27 +22,27 @@
 #' @param activation String vector: Activation type to use: "relu", "selu", "elu", "sigmoid", "hard_sigmoid", "tanh",
 #' "exponential", "linear", "softmax", "softplus", "softsign". Default = "relu"
 #' @param batch.normalization Logical: If TRUE, batch normalize after each hidden layer. Default = TRUE
-#' @param output String: Activation to use for output layer. Can be any as in \code{activation}.
+#' @param output String: Activation to use for output layer. Can be any as in `activation`.
 #' Default = "linear" for Regression, "sigmoid" for binary classification, "softmax" for multiclass
 #' @param loss String: Loss to use: Default = "mean_squared_error" for regression, "binary_crossentropy" for binary
 #' classification, "sparse_categorical_crossentropy" for multiclass
 #' @param optimizer String: Optimization to use: "rmsprop", "adadelta", "adagrad", "adam", "adamax", "nadam", "sgd".
 #' Default = "rmsprop"
-#' @param learning.rate Float: learning rate. Defaults depend on \code{optimizer} used and are:
-#' \code{rmsprop = .001, adadelta = 1, adagrad = .01, adamax = .002, adam = .001, nadam = .002, sgd = .1}
+#' @param learning.rate Float: learning rate. Defaults depend on `optimizer` used and are:
+#' `rmsprop = .001, adadelta = 1, adagrad = .01, adamax = .002, adam = .001, nadam = .002, sgd = .1`
 #' @param metric String: Metric used for evaluation during train. Default = "mse" for regression,
 #'  "accuracy" for classification.
 #' @param epochs Integer: Number of epochs. Default = 100
 #' @param batch.size Integer: Batch size. Default = N of cases
 #' @param validation.split Float (0, 1): proportion of training data to use for validation. Default = .2
 #' @param callback Function to be called by keras during fitting.
-#' Default = \code{keras::callback_early_stopping(patience = 150)} for early stopping.
+#' Default = `keras::callback_early_stopping(patience = 150)` for early stopping.
 #' @param scale Logical: If TRUE, scale featues before training. Default = TRUE
-#' column means and standard deviation will be saved in \code{rtMod$extra} field to allow
+#' column means and standard deviation will be saved in `rtMod$extra` field to allow
 #' scaling ahead of prediction on new data
 #' @param ... Additional parameters
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Deep Learning
 #' @export

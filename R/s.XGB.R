@@ -16,8 +16,8 @@
 #' Case weights and therefore IPW do not seem to work, despite following documentation.
 #' See how ipw = T fails and upsample = T works in imbalanced dataset.
 #' 11.24.16: Updated to work with latest development version of XGBoost from github, which changed some of
-#' \code{xgboost}'s return values and is therefore not compatible with older versions
-#' \link{s.XGBLIN} is a wrapper for \code{s.XGB} with \code{booster = "gblinear"}
+#' `xgboost`'s return values and is therefore not compatible with older versions
+#' [s.XGBLIN] is a wrapper for `s.XGB` with `booster = "gblinear"`
 #' @inheritParams s.GLM
 #' @param booster String: Booster to use. Options: "gbtree", "gblinear"
 #' @param silent 0: print XGBoost messages; 1: print no XGBoost messages
@@ -41,20 +41,20 @@
 #' @param objective (Default = NULL)
 #' @param sample.type (Default = "uniform")
 #' @param normalize.type (Default = "forest")
-#' @param obj Function: Custom objective function. See \code{?xgboost::xgboost}
-#' @param feval Function: Custom evaluation function. See \code{?xgboost::xgboost}
+#' @param obj Function: Custom objective function. See `?xgboost::xgboost`
+#' @param feval Function: Custom evaluation function. See `?xgboost::xgboost`
 #' @param xgb.verbose Integer: Verbose level for XGB learners used for tuning.
 #' @param print_every_n Integer: Print evaluation metrics every this many iterations
-#' @param early.stopping.rounds Integer: Training on resamples of \code{x.train} (tuning) will stop if performance
+#' @param early.stopping.rounds Integer: Training on resamples of `x.train` (tuning) will stop if performance
 #'   does not improve for this many rounds
 #' @param missing String or Numeric: Which values to consider as missing. Default = NA
 #' @param nthread Integer: Number of threads for xgboost using OpenMP. Only parallelize resamples
-#' using \code{n.cores} or the xgboost execution using this setting. At the moment of writing, parallelization via this
+#' using `n.cores` or the xgboost execution using this setting. At the moment of writing, parallelization via this
 #' parameter causes a linear booster to fail most of the times. Therefore, default is rtCores
 #' for 'gbtree', 1 for 'gblinear'
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @export

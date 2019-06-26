@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.POLYMARS.R
 \name{s.POLYMARS}
 \alias{s.POLYMARS}
-\title{Multivariate adaptive polynomial spline regression (POLYMARS) [C, R]}
+\title{Multivariate adaptive polynomial spline regression (POLYMARS) \link{C, R}}
 \usage{
 s.POLYMARS(x, y = NULL, x.test = NULL, y.test = NULL,
   x.name = NULL, y.name = NULL,

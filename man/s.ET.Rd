@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.ET.R
 \name{s.ET}
 \alias{s.ET}
-\title{ExtraTrees [C, R]}
+\title{ExtraTrees \link{C, R}}
 \usage{
 s.ET(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, n.trees = 500, mtry = if (!is.null(y) &&

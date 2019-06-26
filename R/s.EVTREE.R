@@ -4,18 +4,18 @@
 
 #' Evolutionary Learning of Globally Optimal Trees [C, R]
 #'
-#' Train a EVTREE for regression or classification using \code{evtree}
+#' Train a EVTREE for regression or classification using `evtree`
 #'
 #' @inheritParams s.GLM
 #' @param parms List of additional parameters for the splitting function.
-#' See \code{rpart::rpart("parms")}
+#' See `rpart::rpart("parms")`
 #' @param cost Float, vector >0: One for each variable in the model.
-#' See \code{rpart::rpart("cost")}
+#' See `rpart::rpart("cost")`
 #' @param model Logical: If TRUE, keep a copy of the model. Default = TRUE
-#' @param ... Additional arguments to be passed to \code{rpart::rpart}
-#' @return Object of class \link{rtMod}
+#' @param ... Additional arguments to be passed to `rpart::rpart`
+#' @return Object of class [rtMod]
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @export

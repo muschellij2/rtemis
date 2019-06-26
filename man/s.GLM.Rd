@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.GLM.R
 \name{s.GLM}
 \alias{s.GLM}
-\title{Generalized Linear Model [C, R]}
+\title{Generalized Linear Model \link{C, R}}
 \usage{
 s.GLM(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, family = NULL, interactions = FALSE,

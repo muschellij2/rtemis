@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.H2ODL.R
 \name{s.H2ODL}
 \alias{s.H2ODL}
-\title{Deep Learning on H2O [C, R]}
+\title{Deep Learning on H2O \link{C, R}}
 \usage{
 s.H2ODL(x, y = NULL, x.test = NULL, y.test = NULL, x.valid = NULL,
   y.valid = NULL, x.name = NULL, y.name = NULL, ip = "localhost",

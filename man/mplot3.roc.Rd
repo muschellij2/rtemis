@@ -14,7 +14,7 @@ mplot3.roc(prob, labels, method = c("rt", "pROC"), type = "TPR.FPR",
   filename = NULL, pdf.width = 5, pdf.height = 5, ...)
 }
 \arguments{
-\item{prob}{Vector, Float [0, 1]: Predicted probabilities (i.e. c(.1, .8, .2, .9))}
+\item{prob}{Vector, Float \link{0, 1}: Predicted probabilities (i.e. c(.1, .8, .2, .9))}
 
 \item{labels}{Vector, Integer {0, 1}: True labels (i.e. c(0, 1, 0, 1))}
 

@@ -4,16 +4,16 @@
 
 #' Iterative Random Forest [C, R]
 #'
-#' Train iterative Random Forests for regression or classification using \code{iRF}
+#' Train iterative Random Forests for regression or classification using `iRF`
 #'
-#' If \code{autotue = TRUE}, \code{iRF::tuneRF} will be run to determine best \code{mtry}
+#' If `autotue = TRUE`, `iRF::tuneRF` will be run to determine best `mtry`
 #'   value.
 #'
 #' @inheritParams s.RF
-#' @param ... Additional arguments to be passed to \code{iRF::iRF}
-#' @return \link{rtMod} object
+#' @param ... Additional arguments to be passed to `iRF::iRF`
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @export

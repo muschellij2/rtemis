@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.TFN.R
 \name{s.TFN}
 \alias{s.TFN}
-\title{Neural Network with \pkg{tensorflow} [C, R]}
+\title{Neural Network with \pkg{tensorflow} \link{C, R}}
 \usage{
 s.TFN(x, y = NULL, x.test = NULL, y.test = NULL, x.valid = NULL,
   y.valid = NULL, upsample = FALSE, upsample.seed = NULL,

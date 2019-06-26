@@ -2,9 +2,9 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3} Plot \code{resample}
+#' `mplot3` Plot `resample`
 #' 
-#' Visualizes resampling output using \link{mplot3.img}
+#' Visualizes resampling output using [mplot3.img]
 #' 
 #' For resampling with no replacement where each case may be selected 0 or 1 time,
 #' 0 is white and 1 is teal For resampling with replacement, 0 is white, 1 is blue, 2 is teal

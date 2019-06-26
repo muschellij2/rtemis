@@ -3,105 +3,105 @@
 # 2016-2018 Efstathios D. Gennatas egenn.github.io
 # inv mplot3.xy(c(NULL, NULL, 3:10), 1:10)
 
-#' \code{mplot3}: XY Scatter and line plots
+#' `mplot3`: XY Scatter and line plots
 #'
 #' Plot points and lines with optional fits and standard error bands
 #'
 #' This is relatively old code and may need a little cleaning up
 #'
 #' @param x Numeric vector or list of vectors for x-axis.
-#'   If \code{data} is provided, name of variable, unquoted.
+#'   If `data` is provided, name of variable, unquoted.
 #' @param y Numeric vector of list of vectors for y-axis
-#'   If \code{data} is provided, name of variable, unquoted.
-#' @param fit String: \pkg{rtemis} model to calculate y ~ x fit. Options: see \code{modSelect}
+#'   If `data` is provided, name of variable, unquoted.
+#' @param fit String: \pkg{rtemis} model to calculate y ~ x fit. Options: see `modSelect`
 #'   Can also be Logical, which will give a GAM fit if TRUE. If you specify "NLA", the activation function should
 #'   be passed as a string.
-#' @param formula Formula: Provide a formula to be solved using \link{s.NLS}. If provided, \code{fit} is
-#' forced to \code{'nls'}. e.g. y ~ b * m ^ x for a power curve. Note: \code{nls} is prone to errors
+#' @param formula Formula: Provide a formula to be solved using [s.NLS]. If provided, `fit` is
+#' forced to `'nls'`. e.g. y ~ b * m ^ x for a power curve. Note: `nls` is prone to errors
 #' and warnings, but is powerful. Use single letters for parameter names, no numbers.
 #' @param se.fit Logical: If TRUE, draw the standard error of the fit
-#' @param error.x Vector, float: Error in \code{x} (e.g. standard deviation) will be plotted as bars around point
-#' @param error.y Vector, float: Error in \code{y} (e.g. standard deviation) will be plotted as bars around point
-#' @param cluster String: Clusterer name. Will cluster \code{data.frame(x, y)} and
-#' pass result to \code{group}. Run \link{clustSelect} for options
-#' @param cluster.params List: Names list of parameters to pass to the \code{cluster} function
-#' @param data (Optional) data frame, where \code{x} and \code{y} are defined
+#' @param error.x Vector, float: Error in `x` (e.g. standard deviation) will be plotted as bars around point
+#' @param error.y Vector, float: Error in `y` (e.g. standard deviation) will be plotted as bars around point
+#' @param cluster String: Clusterer name. Will cluster `data.frame(x, y)` and
+#' pass result to `group`. Run [clustSelect] for options
+#' @param cluster.params List: Names list of parameters to pass to the `cluster` function
+#' @param data (Optional) data frame, where `x` and `y` are defined
 #' @param group Vector: will be converted to factor.
-#'   If \code{data} is provided, name of variable, unquoted.
+#'   If `data` is provided, name of variable, unquoted.
 #' @param xlab String: x-axis label
 #' @param ylab String: y-axis label
 #' @param main String: Plot title
-#' @param main.line Float: \code{mtext line} argument for the title. Higher numbers move title upwards.
+#' @param main.line Float: `mtext line` argument for the title. Higher numbers move title upwards.
 #' Default = .5
 #' @param main.adj Float: Plot title alignment (0 = left, .5 = center, 1 = right)
 #' @param main.col Color for title. Defaults to black for theme "light" and "box", otherwise white
-#' @param main.font Integer: 1: regular, 2: bold, 3: italic. See \code{par("font")} for more
-#' @param main.family String: Font family to use. See \code{par("family")}
-#' @param cex Float: Character expansion factor (See \code{?par})
-#' @param se.lty How to draw the \code{se.fit} "poly" draws a polygon around the fit line,
+#' @param main.font Integer: 1: regular, 2: bold, 3: italic. See `par("font")` for more
+#' @param main.family String: Font family to use. See `par("family")`
+#' @param cex Float: Character expansion factor (See `?par`)
+#' @param se.lty How to draw the `se.fit` "poly" draws a polygon around the fit line,
 #'   otherwise an integer defines the lty (line type) for lines to be drawn
-#' @param se.col Color for \code{se.fit}
-#' @param se.alpha Alpha for \code{se.fit}
-#' @param se.times Draw polygon or lines at +/- \code{se.times} * standard error of fit. Defaults to 2
+#' @param se.col Color for `se.fit`
+#' @param se.alpha Alpha for `se.fit`
+#' @param se.times Draw polygon or lines at +/- `se.times` * standard error of fit. Defaults to 2
 #'   (1.96 * standard error corresponds to 95\% confidence interval)
-#' @param se.border Define border of polygon for \code{se.fit}.
-#'   See \code{border} in \code{graphics::polygon}
-#' @param se.density Density of shading line of polygon for \code{se.fit}.
-#'   See \code{density} in \code{graphics::polygon}
-#' @param type String: "p" for points, "l" for lines, "s" for steps. Default = "p". If \code{x} and/or \code{y} contains multiple
-#'   vectors, \code{type} can be a vector, e.g. \code{c("p", "l", "l")} will give a set of points and two sets
-#'   of lines. Otherwise, \code{type} is recycled to length of x
+#' @param se.border Define border of polygon for `se.fit`.
+#'   See `border` in `graphics::polygon`
+#' @param se.density Density of shading line of polygon for `se.fit`.
+#'   See `density` in `graphics::polygon`
+#' @param type String: "p" for points, "l" for lines, "s" for steps. Default = "p". If `x` and/or `y` contains multiple
+#'   vectors, `type` can be a vector, e.g. `c("p", "l", "l")` will give a set of points and two sets
+#'   of lines. Otherwise, `type` is recycled to length of x
 #' @param xlim Float vector, length 2: x-axis limits
 #' @param ylim Float vector, length 2: y-axis limits
 #' @param axes Logical: Should the axes be drawn? Defaults to TRUE
 #' @param axes.equal Logical: Should axes be equal? Defaults to FALSE
-#' @param axes.col String: Color for axes values (box color set with \code{box.col})
+#' @param axes.col String: Color for axes values (box color set with `box.col`)
 #' @param pty "s" gives a square plot, "m" gives a plot that fills graphics device size. Defaults to "s"
-#'   (See \code{?par})
+#'   (See `?par`)
 #' @param box Logical: Should a box be drawn around the plot? Defaults to TRUE for themes "box" and "darkbox"
 #' @param bty Character: "o", "l", "7", "c", "u", or "]" result in a box resembling each character.
-#'   (See \code{?par})
+#'   (See `?par`)
 #' @param box.col Box color
-#' @param box.alpha Alpha for \code{box.col}
+#' @param box.alpha Alpha for `box.col`
 #' @param box.lty Box line type
 #' @param bot.lwd Box line width
 #' @param fit.lwd Fit line width
 #' @param grid Logical: Should grid be drawn?
 #' @param grid.nx Integer: N of grid lines on the x axis.
-#' Use with caution, probably along with \code{xaxs = "i"}
+#' Use with caution, probably along with `xaxs = "i"`
 #' @param grid.ny Integer: N of grid lines on the y axis
-#' Use with caution, probably along with \code{yaxs = "i"}
+#' Use with caution, probably along with `yaxs = "i"`
 #' @param grid.col Grid color
-#' @param grid.alpha Alpha for \code{grid.col}
-#' @param grid.lty Grid line type (See \code{?par("lty")})
+#' @param grid.alpha Alpha for `grid.col`
+#' @param grid.lty Grid line type (See `?par("lty")`)
 #' @param grid.lwd Grid line width
 #' @param bg Background color. Defaults to white for themes "light" and "box", black otherwise.
 #' @param rsq Logical: If TRUE, add legend with R-squared (if fit is not NULL)
 #' @param rsq.pval Logical: If TRUE, add legend with R-squared and its p-value (if fit is not NULL)
 #' @param zero.lines Logical: If TRUE, draw lines at x = 0 and y = 0
-#' @param zero.col Color for \code{zero.lines}
-#' @param zero.alpha Color alpha for \code{zero.lines}
+#' @param zero.col Color for `zero.lines`
+#' @param zero.alpha Color alpha for `zero.lines`
 #' @param zero.lty Zero line line type
 #' @param zero.lwd Zero line width
 #' @param annotation String: Add annotation at the bottom right of the plot
 #' @param annotation.col Color for annotation
-#' @param tck Float: Tick length. Can be negative (See \code{?par("tck")})
+#' @param tck Float: Tick length. Can be negative (See `?par("tck")`)
 #' @param x.axis.padj Adjustment for the x axis tick labels position
-#' @param xlab.line Adjustment for the x axis label position (See code{line} in \code{?mtext})
-#' @param y.axis.padj Similar to \code{x.axis.padj} for the y axis
-#' @param ylab.line Similar to \code{xlab.line} for the y axis
-#' @param xlab.adj \code{adj} for \code{xlab} (See \code{?par})
-#' @param ylab.adj \code{adj} for \code{ylab} (See \code{?par})
+#' @param xlab.line Adjustment for the x axis label position (See code{line} in `?mtext`)
+#' @param y.axis.padj Similar to `x.axis.padj` for the y axis
+#' @param ylab.line Similar to `xlab.line` for the y axis
+#' @param xlab.adj `adj` for `xlab` (See `?par`)
+#' @param ylab.adj `adj` for `ylab` (See `?par`)
 #' @param theme String: "light", "dark", "lightgrid", "darkgrid", "lightbox", "darkbox"
-#' Default = "lightgrid" if no default \code{"rt.fit"} is set using \code{options}.
-#' You can set a system-wide default in your \code{.Rprofile} by including a line like
+#' Default = "lightgrid" if no default `"rt.fit"` is set using `options`.
+#' You can set a system-wide default in your `.Rprofile` by including a line like
 #' options(rt.theme = 'lightgrid')
-#' @param mar Vector, length 4: Margins; see \code{mar} in \code{?par}
-#' @param group.legend Logical: If TRUE, place \code{group.names} in a legend
-#' @param group.names (Optional) If multiple groups are plotted, use these names if \code{group.title = TRUE}
+#' @param mar Vector, length 4: Margins; see `mar` in `?par`
+#' @param group.legend Logical: If TRUE, place `group.names` in a legend
+#' @param group.names (Optional) If multiple groups are plotted, use these names if `group.title = TRUE`
 #' @param group.title String: Group title, shown above group names. e.g. if group names are
-#'   c("San Francisco", "Philadelphia"), \code{group.title} can be "Place of residence"
-#' @param new Logical: If TRUE, add plot to existing plot. See \code{par("new")}
+#'   c("San Francisco", "Philadelphia"), `group.title` can be "Place of residence"
+#' @param new Logical: If TRUE, add plot to existing plot. See `par("new")`
 #' @param ... Additional arguments to be passed to learner function
 #' @author Efstathios D. Gennatas
 #' @export
@@ -1057,14 +1057,14 @@ mplot3.xy <- function(x, y,
 } # rtemis::mplot3.xy
 
 
-#' \code{mplot3}: True vs. Fitted plot
+#' `mplot3`: True vs. Fitted plot
 #'
-#' An \code{mplot3.xy} alias with defaults for plotting a learner's performance
+#' An `mplot3.xy` alias with defaults for plotting a learner's performance
 #'
 #' @inheritParams mplot3.xy
 #' @param x Vector, numeric / factor / survival for regression, classification, survival: True values
 #' @param y Vector, numeric / factor / survival for regression, classification, survival: Predicted values
-#' @param ... Additional argument to be passed to \link{mplot3.conf} (classification) or \link{mplot3.xy} (regression)
+#' @param ... Additional argument to be passed to [mplot3.conf] (classification) or [mplot3.xy] (regression)
 #' @export
 
 mplot3.fit <- function(x, y,

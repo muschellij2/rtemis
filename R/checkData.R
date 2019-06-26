@@ -6,13 +6,13 @@
 #'
 #' Performs a series of simple checks on a dataset that may be important to perform ahead of
 #' data analysis. This function makes no changes to data, but reports potential course of action
-#' that can be taken using \link{preprocess}
+#' that can be taken using [preprocess]
 #'
 #' @param x Input dataset; will be converted to data.frame
-#' @param name String, optional: Name of dataset. (This is helpful when applying \code{preprocess}
+#' @param name String, optional: Name of dataset. (This is helpful when applying `preprocess`
 #' on a list of items using by vectorization, e.g. using *ply commands, where the names of the list
 #' elements will not be displayed correctly)
-#' @param str Logical: If TRUE, show output of \code{str}
+#' @param str Logical: If TRUE, show output of `str`
 #' @param recommend Logical: If TRUE, print recommendations based on check. Default = TRUE
 #' @param reportCases.thres Float (0, 1]: Report, by number, all cases missing greater or equal to
 #' this fraction of features

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.KNN.R
 \name{s.KNN}
 \alias{s.KNN}
-\title{k-Nearest Neighbors Classification and Regression [C, R]}
+\title{k-Nearest Neighbors Classification and Regression \link{C, R}}
 \usage{
 s.KNN(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, k = 3, algorithm = "kd_tree", print.plot = TRUE,

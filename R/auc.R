@@ -1,6 +1,6 @@
 #' Area under the ROC Curve
 #'
-#' Get the Area under the ROC curve to assess classifier performance using \code{pROC}
+#' Get the Area under the ROC curve to assess classifier performance using `pROC`
 #'
 #' Consider looking at Balanced Accuracy and F1 as well
 #'
@@ -12,8 +12,8 @@
 #' AUC. Also, AUC has been very popular, but I strongly recommend reporting Balanced Accuracy instead.
 #' @param prob Float, Vector: Probabilities or model scores (e.g. c(.32, .75, .63), etc)
 #' @param labels True labels of outcomes (e.g. c(0, 1, 1))
-#' @param method String: "pROC", "auc_pairs", or "ROCR": Method to use. Will use \code{pROC::roc}, \link{auc_pairs},
-#' \code{ROCR::performance}, respectively. They should all give the same result, they are included for peace of mind.
+#' @param method String: "pROC", "auc_pairs", or "ROCR": Method to use. Will use `pROC::roc`, [auc_pairs],
+#' `ROCR::performance`, respectively. They should all give the same result, they are included for peace of mind.
 #' See Details
 #' @param verbose Logical: If TRUE, print messages to output
 #' @export

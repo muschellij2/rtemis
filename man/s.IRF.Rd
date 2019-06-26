@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.IRF.R
 \name{s.IRF}
 \alias{s.IRF}
-\title{Iterative Random Forest [C, R]}
+\title{Iterative Random Forest \link{C, R}}
 \usage{
 s.IRF(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, n.trees = 1000, n.iter = 5, n.bootstrap = 30,
@@ -51,7 +51,7 @@ Default = NULL (random seed)}
 \item{stepFactor}{Float: If \code{autotune = TRUE}, at each tuning iteration, \code{mtry} is multiplied or
 divided by this value. Default = 1.5}
 
-\item{mtry}{[gS] Integer: Number of features sampled randomly at each split}
+\item{mtry}{\link{gS} Integer: Number of features sampled randomly at each split}
 
 \item{mtryStart}{Integer: If \code{autotune = TRUE}, start at this value for \code{mtry}}
 
@@ -104,7 +104,7 @@ Train iterative Random Forests for regression or classification using \code{iRF}
 }
 \details{
 If \code{autotue = TRUE}, \code{iRF::tuneRF} will be run to determine best \code{mtry}
-  value.
+value.
 }
 \seealso{
 \link{elevate} for external cross-validation

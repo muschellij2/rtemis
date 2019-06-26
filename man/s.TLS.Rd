@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.TLS.R
 \name{s.TLS}
 \alias{s.TLS}
-\title{Total Least Squares Regression [R]}
+\title{Total Least Squares Regression \link{R}}
 \usage{
 s.TLS(x, y = NULL, x.test = NULL, y.test = NULL, x.name = "x",
   y.name = "y", print.plot = TRUE, plot.fitted = NULL,

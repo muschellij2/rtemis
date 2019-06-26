@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.H2ORF.R
 \name{s.H2ORF}
 \alias{s.H2ORF}
-\title{Random Forest on H2O [C, R]}
+\title{Random Forest on H2O \link{C, R}}
 \usage{
 s.H2ORF(x, y = NULL, x.test = NULL, y.test = NULL, x.valid = NULL,
   y.valid = NULL, x.name = NULL, y.name = NULL, ip = "localhost",

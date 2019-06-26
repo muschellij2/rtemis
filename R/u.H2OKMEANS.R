@@ -4,13 +4,13 @@
 
 #' K-Means Clustering on H2O
 #'
-#' K-Means clustering using \code{h2o::h2o.kmeans}
-#' Check out the H2O Flow at \code{[ip]:[port]}, Default IP:port is "localhost:54321"
-#' e.g. if running on localhost, point your web browser to \code{localhost:54321}
+#' K-Means clustering using `h2o::h2o.kmeans`
+#' Check out the H2O Flow at `[ip]:[port]`, Default IP:port is "localhost:54321"
+#' e.g. if running on localhost, point your web browser to `localhost:54321`
 #'
-#' For additional information, see help on \code{h2o::h2o.kmeans}
+#' For additional information, see help on `h2o::h2o.kmeans`
 #' @inheritParams u.KMEANS
-#' @param estimate.k Logical: if TRUE, estimate k up to a maximum set by the \code{k} argument
+#' @param estimate.k Logical: if TRUE, estimate k up to a maximum set by the `k` argument
 #' @param nfolds Integer: Number of cross-validation folds
 #' @param max.iterations Integer: Maximum number of iterations
 #' @param ip String: IP address of H2O server. Default = "localhost"
@@ -22,8 +22,8 @@
 #' "OneHotExplicit", "Binary", "Eigen", "LabelEncoder", "SortByResponse", "EnumLimited".
 #' Default = "AUTO"
 #' @param n.cores Integer: Number of cores to use
-#' @param ... Additional arguments to pass to \code{h2p::h2o.kmeans}
-#' @return \link{rtMod} object
+#' @param ... Additional arguments to pass to `h2p::h2o.kmeans`
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
 #' @family Clustering
 #' @export

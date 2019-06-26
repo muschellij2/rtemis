@@ -6,10 +6,10 @@
 #'
 #' Get the name of the variable passed as argument, limit number of characters in case of failure
 #'
-#' One way to test is to use \link{learn} with x.name = NULL, y.name = NULL
+#' One way to test is to use [learn] with x.name = NULL, y.name = NULL
 #'
 #' @param x Variable whose name you want to extract
-#' @param alt String: If name derived from \code{deparse(substitute(x))} exceeds \code{max.nchar} characters, use this name instead
+#' @param alt String: If name derived from `deparse(substitute(x))` exceeds `max.nchar` characters, use this name instead
 #' @param max.nchar Integer: Maximum N of characters to allow for name
 #' @author Efstathios D Gennatas
 #' @keywords internal

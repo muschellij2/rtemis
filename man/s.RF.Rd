@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.RF.R
 \name{s.RF}
 \alias{s.RF}
-\title{Random Forest Classification and Regression [C, R]}
+\title{Random Forest Classification and Regression \link{C, R}}
 \usage{
 s.RF(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, n.trees = 1000, autotune = FALSE,
@@ -46,7 +46,7 @@ Columns must correspond to columns in \code{x}}
 \item{stepFactor}{Float: If \code{autotune = TRUE}, at each tuning iteration, \code{mtry} is multiplied or
 divided by this value. Default = 1.5}
 
-\item{mtry}{[gS] Integer: Number of features sampled randomly at each split}
+\item{mtry}{\link{gS} Integer: Number of features sampled randomly at each split}
 
 \item{mtryStart}{Integer: If \code{autotune = TRUE}, start at this value for \code{mtry}}
 
@@ -81,10 +81,10 @@ Default = NULL (random seed)}
 
 \item{replace}{Logical: If TRUE, sample cases with replacement during training. Default = TRUE}
 
-\item{nodesize}{[gS]: Integer: Minimum size of terminal nodes. Default = 5 (Regression);
+\item{nodesize}{\link{gS}: Integer: Minimum size of terminal nodes. Default = 5 (Regression);
 1 (Classification)}
 
-\item{maxnodes}{[gS]: Integer: Maximum number of terminal nodes in a tree. Default = NULL; trees
+\item{maxnodes}{\link{gS}: Integer: Maximum number of terminal nodes in a tree. Default = NULL; trees
 grown to maximum possible}
 
 \item{strata}{Vector, Factor: Will be used for stratified sampling}
@@ -157,7 +157,7 @@ Train a Random Forest for regression or classification using \code{randomForest}
 }
 \details{
 If \code{autotue = TRUE}, \code{randomForest::tuneRF} will be run to determine best \code{mtry}
-  value.
+value.
 }
 \seealso{
 \link{elevate} for external cross-validation

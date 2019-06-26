@@ -2,12 +2,12 @@
 # ::rtemis::
 # 2016-8 Efstathios D. Gennatas egenn.github.io
 
-#' \code{rtemis-internals}: \code{intro}
+#' `rtemis-internals`: `intro`
 #'
 #' Intro
 #'
 #' Starts function execution timer and opens log file.
-#' Pairs with \code{outro}. Unfortunately the errors and warnings (the stderr; sink(type = "message"))
+#' Pairs with `outro`. Unfortunately the errors and warnings (the stderr; sink(type = "message"))
 #' cannot get split to file and console, so we keep in console only
 #' @keywords internal
 intro <- function(message = NULL,
@@ -48,13 +48,13 @@ intro <- function(message = NULL,
 } # rtemis::intro
 
 
-#' \code{rtemis-internals}: \code{outro}
+#' `rtemis-internals`: `outro`
 #'
 #' Outro
 #'
 #' Stops function execution timer and closes log file.
 #'
-#' Second part to \code{intro}
+#' Second part to `intro`
 #' @keywords internal
 outro <- function(start.time,
                   message = NULL,
@@ -81,7 +81,7 @@ outro <- function(start.time,
 } # rtemis::outro
 
 
-#' \code{rtemis-internals}: \code{dataSummary}
+#' `rtemis-internals`: `dataSummary`
 #'
 #' Print input data dimensions and test dimensions match
 #' @keywords internal
@@ -118,7 +118,7 @@ dataSummary <- function(x, y,
 } # rtemis::dataSummary
 
 
-#' \code{rtemis-internals}: \code{parameterSummary}
+#' `rtemis-internals`: `parameterSummary`
 #'
 #' Pretty print a collection of objects
 #'
@@ -128,7 +128,7 @@ dataSummary <- function(x, y,
 #' name of the list or data frame prepended.
 #' @param ... Variables to print
 #' @param title String: title
-#' @param pad Integer: Pad for \link{printls}
+#' @param pad Integer: Pad for [printls]
 #' @export
 #' @author Efstathios D. Gennatas
 
@@ -159,7 +159,7 @@ parameterSummary <- function(...,
 } # rtemis::parameterSummary
 
 
-#' \code{rtemis-internals}: \code{gridSummary}
+#' `rtemis-internals`: `gridSummary`
 #'
 #' Pretty print list of parameters with more than one value, which will be used in a grid search
 #' @keywords internal
@@ -179,7 +179,7 @@ gridSummary <- function(...) {
 } # rtemis::gridSummary
 
 
-#' \code{rtemis-internals}: \code{errorSummary}
+#' `rtemis-internals`: `errorSummary`
 #'
 #' Print Fit and Validation modError
 #' @keywords internal

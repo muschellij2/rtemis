@@ -10,29 +10,29 @@
 #' @param y Outcome
 #' @param weights Float, vector: Case weights
 #' @param method String: Method to use:
-#' "glm": uses \code{stats::lm.wfit};
-#' "glmnet": uses \code{glmnet::glmnet};
-#' "cv.glmnet": uses \code{glmnet:cv.glmnet};
-#' "lm.ridge": uses \code{MASS::lm.ridge};
-#' "allsubsets": uses \code{leaps::regsubsets} with \code{method = "exhaustive"};
-#' "forwardStepwise": uses \code{leaps::regsubsets} with \code{method = "forward};
-#' "backwardStepwise": uses \code{leaps::regsubsets} with \code{method = "backward};
-#' "sgd": uses \code{sgd::sgd}
-#' "solve": uses \code{base::solve}
-#' @param alpha Float: \code{alpha} for method = \code{glmnet} or \code{cv.glmnet}. Default = 0
-#' @param lambda Float: The lambda value for \code{glmnet}, \code{cv.glmnet}, \code{lm.ridge}
-#' Note: For \code{glmnet} and \code{cv.glmnet}, this is the lambda used for prediction. Training uses
-#' \code{lambda.seq}. Default = .01
-#' @param lambda.seq Float, vector: lambda sequence for \code{glmnet} and \code{cv.glmnet}. Default = NULL
-#' @param cv.glmnet.nfolds Integer: Number of folds for \code{cv.glmnet}
+#' "glm": uses `stats::lm.wfit`;
+#' "glmnet": uses `glmnet::glmnet`;
+#' "cv.glmnet": uses `glmnet:cv.glmnet`;
+#' "lm.ridge": uses `MASS::lm.ridge`;
+#' "allsubsets": uses `leaps::regsubsets` with `method = "exhaustive"`;
+#' "forwardStepwise": uses `leaps::regsubsets` with `method = "forward`;
+#' "backwardStepwise": uses `leaps::regsubsets` with `method = "backward`;
+#' "sgd": uses `sgd::sgd`
+#' "solve": uses `base::solve`
+#' @param alpha Float: `alpha` for method = `glmnet` or `cv.glmnet`. Default = 0
+#' @param lambda Float: The lambda value for `glmnet`, `cv.glmnet`, `lm.ridge`
+#' Note: For `glmnet` and `cv.glmnet`, this is the lambda used for prediction. Training uses
+#' `lambda.seq`. Default = .01
+#' @param lambda.seq Float, vector: lambda sequence for `glmnet` and `cv.glmnet`. Default = NULL
+#' @param cv.glmnet.nfolds Integer: Number of folds for `cv.glmnet`
 #' @param which.cv.glmnet.lambda String: Whitch lambda to pick from cv.glmnet:
 #' "lambda.min": Lambda that gives minimum cross-validated error;
-#' @param nbest Integer: For \code{method = "allSubsets"}, number of subsets of each size to record. Default = 1
-#' @param nvmax Integer: For \code{method = "allSubsets"}, maximum number of subsets to examine.
-#' @param sgd.model String: Model to use for \code{method = "sgd"}. Default = "glm"
-#' @param sgd.model.control List: \code{model.control} list to pass to \code{sgd::sgd}
-#' @param sgd.control List: \code{sgd.control} list to pass to \code{sgd::sgd}
-#' @param ... Additional parameters to pass to \code{leaps::regsubsets}
+#' @param nbest Integer: For `method = "allSubsets"`, number of subsets of each size to record. Default = 1
+#' @param nvmax Integer: For `method = "allSubsets"`, maximum number of subsets to examine.
+#' @param sgd.model String: Model to use for `method = "sgd"`. Default = "glm"
+#' @param sgd.model.control List: `model.control` list to pass to `sgd::sgd`
+#' @param sgd.control List: `sgd.control` list to pass to `sgd::sgd`
+#' @param ... Additional parameters to pass to `leaps::regsubsets`
 #' "lambda.1se": Largest lambda such that error is within 1 s.e. of the minimum.
 #' @return Coefficients
 #' @export

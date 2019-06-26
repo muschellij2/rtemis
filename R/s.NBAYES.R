@@ -4,11 +4,11 @@
 
 #' Naive Bayes Classifier [C]
 #'
-#' Train a Naive Bayes Classifier using \code{e1071::naiveBayes}
+#' Train a Naive Bayes Classifier using `e1071::naiveBayes`
 #'
 #' @inheritParams s.GLM
 #' @param laplace Float (>0): Laplace smoothing. Default = 0 (no smoothing)
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
 #' @family Supervised Learning
 #' @export

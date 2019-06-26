@@ -2,9 +2,9 @@
 # ::rtemis::
 # Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3} ADDTREE trees
+#' `mplot3` ADDTREE trees
 #' 
-#' Plot ADDTREE trees using \code{data.tree::plot.Node}
+#' Plot ADDTREE trees using `data.tree::plot.Node`
 #' 
 #' @author Efstathios D. Gennatas
 #' @export

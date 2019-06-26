@@ -5,14 +5,14 @@
 # 1: condition; 2: probability; 4: N cases
 # TODO: Fails sometimes for regression: must track down through DiagrammeR to graphviz
 
-#' \code{mplot3}: \code{data.tree}  trees
+#' `mplot3`: `data.tree`  trees
 #'
-#' Plot \code{data.tree} trees using \code{data.tree::plot.Node}
+#' Plot `data.tree` trees using `data.tree::plot.Node`
 #'
-#' If you want to show split conditions as edge labels (\code{edge.labels = TRUE}),
-#' it is recommened to set \code{rankdir = "LR"} and \code{node.cond = FALSE}.
+#' If you want to show split conditions as edge labels (`edge.labels = TRUE`),
+#' it is recommened to set `rankdir = "LR"` and `node.cond = FALSE`.
 #' Edge labels in graphviz are shown to the right of
-#' the edge when \code{rankdir = "TB"} and above when \code{rankdir = "LR"}.
+#' the edge when `rankdir = "TB"` and above when `rankdir = "LR"`.
 #' @inheritParams mplot3.addtree
 #' @param node.cond Logical: If TRUE, print the splitting condition inside each node. Default = TRUE
 #' @param node.prob Logical: If TRUE, print the probability estimate for the first class of the outcome

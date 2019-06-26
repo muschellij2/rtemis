@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.RULEFEAT.R
 \name{s.RULEFEAT}
 \alias{s.RULEFEAT}
-\title{ruleFeat [C, R]}
+\title{ruleFeat \link{C, R}}
 \usage{
 s.RULEFEAT(x, y = NULL, x.test = NULL, y.test = NULL,
   n.trees = 100, gbm.params = list(bag.fraction = 0.5, shrinkage =
@@ -28,7 +28,7 @@ Columns must correspond to columns in \code{x}}
 
 \item{gbm.params}{Named list: Parameters for \link{s.GBM}}
 
-\item{meta.alpha}{Float [0, 1]: \code{alpha} for \link{s.GLMNET}, Default = 1}
+\item{meta.alpha}{Float \link{0, 1}: \code{alpha} for \link{s.GLMNET}, Default = 1}
 
 \item{meta.lambda}{Float: \code{lambda} for \link{s.GLMNET}. Default = NULL (will be determined automatically
 by crossvalidation)}

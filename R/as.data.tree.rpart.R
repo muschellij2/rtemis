@@ -2,13 +2,13 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' Convert \code{rpart} rules to \code{data.tree} object
+#' Convert `rpart` rules to `data.tree` object
 #'
-#' Convert an \code{rpart} object to a \code{data.tree} object, which can be plotted with
-#' \link{mplot3.cart}
-#' @param object \code{rpart} object
+#' Convert an `rpart` object to a `data.tree` object, which can be plotted with
+#' [mplot3.cart]
+#' @param object `rpart` object
 #' @param verbose Logical: If TRUE, print messages to console
-#' @return \code{data.tree} object
+#' @return `data.tree` object
 #' @author Efstathios D. Gennatas
 #' @export
 

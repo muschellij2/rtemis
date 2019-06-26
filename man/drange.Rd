@@ -17,7 +17,7 @@ drange(x, lo = 0, hi = 1, byCol = TRUE)
 }
 \description{
 \code{rtemis preproc}: Adjusts the dynamic range of a vector or matrix input.
-  By default normalizes to 0-1 range.
+By default normalizes to 0-1 range.
 }
 \examples{
 x <- runif(20, -10, 10)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.GAMSEL.R
 \name{s.GAMSEL}
 \alias{s.GAMSEL}
-\title{Regularized Generalized Additive Model (GAMSEL) [C, R]}
+\title{Regularized Generalized Additive Model (GAMSEL) \link{C, R}}
 \usage{
 s.GAMSEL(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, data = NULL, data.test = NULL, ipw = TRUE,

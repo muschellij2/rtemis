@@ -2,7 +2,7 @@
 # ::rtemis::
 # Efstathios D. Gennatas egenn.github.io
 
-#' \code{rtemis-internals}: \code{dataPrepare}
+#' `rtemis-internals`: `dataPrepare`
 #'
 #' Prepare data for \pkg{rtemis} modeling
 #'
@@ -14,7 +14,7 @@
 #' @param ipw.type {1, 2}: 1:
 #' @param removeDots Logical: If TRUE, replace dots in variable names with underscores.
 #' Some algorithms do not work with variable names containing dots (SparkML)
-#' @param .preprocess List: Preprocessing settings. Set with \link{rtset.preprocess}
+#' @param .preprocess List: Preprocessing settings. Set with [rtset.preprocess]
 #' @param verbose Logical: If TRUE, print messages to console
 #' @export
 

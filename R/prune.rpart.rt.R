@@ -1,4 +1,4 @@
-#' \code{prune.rpart} experimental replacement
+#' `prune.rpart` experimental replacement
 #' @author Efstathios D. Gennatas
 #' @export
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.EVTREE.R
 \name{s.EVTREE}
 \alias{s.EVTREE}
-\title{Evolutionary Learning of Globally Optimal Trees [C, R]}
+\title{Evolutionary Learning of Globally Optimal Trees \link{C, R}}
 \usage{
 s.EVTREE(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, weights = NULL, ipw = TRUE, ipw.type = 2,

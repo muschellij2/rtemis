@@ -2,7 +2,7 @@
 % Please edit documentation in R/bag.R
 \name{bag}
 \alias{bag}
-\title{Bag an \pkg{rtemis} learner for regression or classification [C, R]}
+\title{Bag an \pkg{rtemis} learner for regression or classification \link{C, R}}
 \usage{
 bag(x, y = NULL, x.test = NULL, y.test = NULL, weights = NULL,
   mod = "cart", k = 10, mod.params = list(), ipw = TRUE,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.RANGER.R
 \name{s.RANGER}
 \alias{s.RANGER}
-\title{Random Forest Classification and Regression [C, R]}
+\title{Random Forest Classification and Regression \link{C, R}}
 \usage{
 s.RANGER(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, n.trees = 1000, weights = NULL, ipw = TRUE,
@@ -65,7 +65,7 @@ For classification only; need not add up to 1}
 \item{stepFactor}{Float: If \code{autotune = TRUE}, at each tuning iteration, \code{mtry} is multiplied or
 divided by this value. Default = 1.5}
 
-\item{mtry}{[gS] Integer: Number of features sampled randomly at each split. Defaults to square root of n of
+\item{mtry}{\link{gS} Integer: Number of features sampled randomly at each split. Defaults to square root of n of
 features for classification, and a third of n of features for regression.}
 
 \item{mtryStart}{Integer: If \code{autotune = TRUE}, start at this value for \code{mtry}}
@@ -90,7 +90,7 @@ Default = NULL, which results in "Balanced Accuracy" for Classification,
 
 \item{replace}{Logical: If TRUE, sample cases with replacement during training. Default = TRUE}
 
-\item{min.node.size}{[gS] Integer: Minimum node size}
+\item{min.node.size}{\link{gS} Integer: Minimum node size}
 
 \item{splitrule}{String: For classification: "gini" (Default) or "extratrees";
 For regression: "variance" (Default), "extratrees" or "maxstat".
@@ -145,8 +145,8 @@ Train a Random Forest for regression or classification using \code{ranger}
 \details{
 You should cconsider, or try, setting mtry to NCOL(x), especially for small number of features.
 If \code{autotune = TRUE}, \code{randomForest::tuneRF} will be run to determine best \code{mtry}
-  value.
-[gS]: indicated parameter will be tuned by grid search if more than one value is passed
+value.
+\link{gS}: indicated parameter will be tuned by grid search if more than one value is passed
 }
 \seealso{
 \link{elevate} for external cross-validation

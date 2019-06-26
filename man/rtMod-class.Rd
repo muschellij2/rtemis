@@ -20,7 +20,7 @@ only used to create predictions (rtMod$predicted) using the trained model and
 calculate error metrics (rtMod$error.test).
 This reflects generalizability of the model and is the error we care the most about.
 The validation set is used during model tuning. Within rtemis, validation sets are
-created automatically by \link{resample} when appropriate, they are not generally
+created automatically by \link{resample}` when appropriate, they are not generally
 input by the user, with few exceptions, as documented in individual functions.
 }
 \section{Fields}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.CTREE.R
 \name{s.CTREE}
 \alias{s.CTREE}
-\title{Conditional Inference Trees [C, R, S]}
+\title{Conditional Inference Trees \link{C, R, S}}
 \usage{
 s.CTREE(x, y = NULL, x.test = NULL, y.test = NULL, weights = NULL,
   control = partykit::ctree_control(), ipw = TRUE, ipw.type = 2,

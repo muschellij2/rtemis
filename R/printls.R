@@ -11,7 +11,7 @@
 #' @param prefix String: Optional prefix for names
 #' @param pad Integer: Pad output with this many spaces. Default = 2
 #' @param center.title Logical: If TRUE, autopad title for centering, if present. Default TRUE
-#' @param color \code{crayon} color to be applied when printing values. Default = NULL (do not use \code{crayon})
+#' @param color `crayon` color to be applied when printing values. Default = NULL (do not use `crayon`)
 #' @author Efstathios D. Gennatas
 #' @export
 
@@ -126,14 +126,14 @@ cpad <- function(x, length = NULL, adjust = c("right", "left")) {
 #' @param x data frame
 #' @param pad Integer: Pad output with this many spaces. Default = 2
 #' @param spacing Integer: Number of spaces between columns. Default = 1
-#' @param ddSci.dp Integer: Number of decimal places to print using \link{ddSci}. Default = NULL for no
+#' @param ddSci.dp Integer: Number of decimal places to print using [ddSci]. Default = NULL for no
 #' formatting
-#' @param transpose Logical: If TRUE, transpose \code{x} before printing. Default = FALSE
+#' @param transpose Logical: If TRUE, transpose `x` before printing. Default = FALSE
 #' @param justify String: "right", "left". Default = "right"
 #' @param colnames Logical: If TRUE, print column names. Default = TRUE
 #' @param rownames Logical: If TRUE, print row names. Default = TRUE
-#' @param column.col \code{crayon} color for printing column names. Default = \pkg{rtemis} default highlight
-#' @param row.col \code{crayon} color for printing row names. Default = silver
+#' @param column.col `crayon` color for printing column names. Default = \pkg{rtemis} default highlight
+#' @param row.col `crayon` color for printing row names. Default = silver
 #' @param newline.pre Logical: If TRUE, print a new line before printing data frame. Default = FALSE
 #' @param newlin Logical: If TRUE, print a new line after printing data frame. Default = FALSE
 #' @author Efstathios D. Gennatas

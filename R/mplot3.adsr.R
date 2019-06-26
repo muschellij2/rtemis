@@ -2,9 +2,9 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' \code{mplot3}: ADSR Plot
+#' `mplot3`: ADSR Plot
 #'
-#' Plot Attack Decay Sustain Release Envelope Generator using \code{mplot3}
+#' Plot Attack Decay Sustain Release Envelope Generator using `mplot3`
 #'
 #' Learn more:
 #' (https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_.28ADSR.29_envelope "ADSR Wikipedia")
@@ -16,7 +16,7 @@
 #' @param I Float: Note on time (in milliseconds)
 #' @param O Float: Note off time (in milliseconds)
 #' @param theme String: "light" or "dark" (Default)
-#' @param ... Additional arguments to pass to \link{mplot3.xy}
+#' @param ... Additional arguments to pass to [mplot3.xy]
 #' @author Efstathios D. Gennatas
 #' @export
 

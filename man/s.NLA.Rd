@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.NLA.R
 \name{s.NLA}
 \alias{s.NLA}
-\title{NonLinear Activation unit Regression (NLA) [R]}
+\title{NonLinear Activation unit Regression (NLA) \link{R}}
 \usage{
 s.NLA(x, y = NULL, x.test = NULL, y.test = NULL,
   activation = softplus, b_o = mean(y), W_o = 1, b_h = 0,

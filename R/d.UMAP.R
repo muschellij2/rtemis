@@ -4,21 +4,21 @@
 
 #' Uniform Manifold Approximation and Projection
 #'
-#' Perform UMAP decomposition using github package \code{jlmelville/uwot}
+#' Perform UMAP decomposition using github package `jlmelville/uwot`
 #'
 #' @param x Input matrix
 #' @param x.test Optional test set matrix. Will be projected on to UMAP bases
 #' @param k Integer: Number of projections
 #' @param n.neighbors Integer: Number of keighbors
-#' @param init String: Initialization type. See \code{uwot::umap "init"}
+#' @param init String: Initialization type. See `uwot::umap "init"`
 #' @param metric String: Distance metric to use: "euclidean", "cosine", "manhattan", "hamming", "categorical"
 #' Default = "euclidean"
 #' @param epochs Integer: Number of epochs
 #' @param learning.rate Float: Learning rate. Default = 1
 #' @param scale Logical: If TRUE, scale input data before doing UMAP. Default = TRUE
 #' @param verbose Logical: If TRUE, print messages to screen. Default = TRUE
-#' @param ... Additional parameters to be passed to \code{uwot::umap}
-#' @return \link{rtDecom} object
+#' @param ... Additional parameters to be passed to `uwot::umap`
+#' @return [rtDecom] object
 #' @author Efstathios D. Gennatas
 #' @family Decomposition
 #' @export

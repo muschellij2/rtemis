@@ -13,7 +13,7 @@
 NULL
 
 
-#' \code{rtset.resample}: Set \link{resample} settings
+#' `rtset.resample`: Set [resample] settings
 #'
 #'
 #' @inheritParams resample
@@ -41,7 +41,7 @@ rtset.resample <- function(resampler = "kfold",
 } # rtemis::rtset.resample
 
 
-#' \code{rtset.grid.resample}: \link{resample} defaults for \link{gridSearchLearn}
+#' `rtset.grid.resample`: [resample] defaults for [gridSearchLearn]
 #'
 #' @inheritParams resample
 #' @rdname rtset
@@ -60,7 +60,7 @@ rtset.grid.resample <- function(resampler = "strat.boot", n.resamples = 10,
 } # rtemis::rtset.grid.resample
 
 
-#' \code{rtset.bag.resample}: \link{resample} defaults for \code{rtMod} bagging
+#' `rtset.bag.resample`: [resample] defaults for `rtMod` bagging
 #'
 #' @inheritParams resample
 #' @rdname rtset
@@ -80,7 +80,7 @@ rtset.bag.resample <- function(resampler = "strat.sub", n.resamples = 10,
 } # rtemis::rtset.bag.resample
 
 
-#' \code{rtset.meta.resampler}: \link{resample} defaults for meta model training
+#' `rtset.meta.resampler`: [resample] defaults for meta model training
 #'
 #' @inheritParams resample
 #' @rdname rtset
@@ -100,7 +100,7 @@ rtset.meta.resample <- function(resampler = "strat.sub", n.resamples = 4,
 } # rtemis::rtset.meta.resample
 
 
-#' \code{rtset.cv.resample}: \link{resample} defaults for cross-validation
+#' `rtset.cv.resample`: [resample] defaults for cross-validation
 #'
 #' @inheritParams resample
 #' @rdname rtset
@@ -131,15 +131,15 @@ rtset.cv.resample <- function(resampler = "kfold", n.resamples = 10,
 # }
 
 
-#' \code{rtset.cluster}: Set up parallel processing using forking (Linux, macOS) or PSOCK cluster (macOS, Linux, Windows)
-#' Defaults to type = "fork", which would call \code{mclapply}
-#' Some functions fail to work correctly with \code{mclapply}, like \code{nnet::multinom}, in those cases
+#' `rtset.cluster`: Set up parallel processing using forking (Linux, macOS) or PSOCK cluster (macOS, Linux, Windows)
+#' Defaults to type = "fork", which would call `mclapply`
+#' Some functions fail to work correctly with `mclapply`, like `nnet::multinom`, in those cases
 #' we use PSOCK cluster
 #'
 #' @param type String: "fork", "psock"
 #' @param hosts Vector of strings: For type = "psock": Host names on which to run (macOS, Linux, Windows)
-#' @param n.cores Integer: Number of cores to use on \code{localhost} for type = "fork" (macOS, Linux only)
-#' @param ... \code{rtset.cluster}: Additional argument to be passed to \code{parallel::makePSOCKcluster}
+#' @param n.cores Integer: Number of cores to use on `localhost` for type = "fork" (macOS, Linux only)
+#' @param ... `rtset.cluster`: Additional argument to be passed to `parallel::makePSOCKcluster`
 #' @return List with parameters
 #' @rdname rtset
 #' @export
@@ -153,7 +153,7 @@ rtset.cluster <- function(type = "fork",
 } # rtemis::rtset.cluster
 
 
-#' \code{rtset.color}: Set parameters for \link{colorGrad}
+#' `rtset.color`: Set parameters for [colorGrad]
 #'
 #' @inheritParams colorGrad
 #' @rdname rtset
@@ -176,7 +176,7 @@ rtset.color <- function(n = 101, colors = NULL,
 } # rtemis::rtset.color
 
 
-#' \code{rtset.preprocess}: Set \link{preprocess} parameters for \link{elevate}'s \code{.preprocess} argument
+#' `rtset.preprocess`: Set [preprocess] parameters for [elevate]'s `.preprocess` argument
 #'
 #' @param decom String: Name of decomposer to use. Default = "ICA"
 #' @param k Integer: Number of dimensions to project to. Default = 2
@@ -220,7 +220,7 @@ rtset.preprocess <- function(completeCases = FALSE,
 } # rtemis::rtset.preprocess
 
 
-#' \code{rtset.decompose}: Set decomposition parameters for \code{elevate}'s \code{.decompose} argument
+#' `rtset.decompose`: Set decomposition parameters for `elevate`'s `.decompose` argument
 #'
 #' @param decom String: Name of decomposer to use. Default = "ICA"
 #' @param k Integer: Number of dimensions to project to. Default = 2
@@ -235,7 +235,7 @@ rtset.decompose <- function(decom = "ICA",
 } # rtemis::rtset.decompose
 
 
-#' \code{rtset.ADDT}: Set parameters for \link{s.ADDT}
+#' `rtset.ADDT`: Set parameters for [s.ADDT]
 #'
 #' @inheritParams s.ADDT
 #' @rdname rtset
@@ -261,7 +261,7 @@ rtset.ADDT <- function(max.depth = 2,
 } # rtemis::rtset.ADDT
 
 
-#' \code{rtset.GBM}: Set parameters for \link{s.GBM}
+#' `rtset.GBM`: Set parameters for [s.GBM]
 #'
 #' @inheritParams s.GBM
 #' @rdname rtset
@@ -293,7 +293,7 @@ rtset.GBM <- function(interaction.depth = 2,
 } # rtemis::rtset.GBM
 
 
-#' \code{rtset.RANGER}: Set parameters for \link{s.RANGER}
+#' `rtset.RANGER`: Set parameters for [s.RANGER]
 #'
 #' @inheritParams s.RANGER
 #' @rdname rtset
@@ -319,7 +319,7 @@ rtset.RANGER <- function(n.trees = 1000,
 } # rtemis::rtset.RANGER
 
 
-#' \code{rtset.DN}: Set parameters for \link{s.DN}
+#' `rtset.DN`: Set parameters for [s.DN]
 #'
 #' @inheritParams s.DN
 #' @rdname rtset
@@ -351,7 +351,7 @@ rtset.DN <- function(hidden = 1,
 } # rtemis::rtset.DN
 
 
-#' \code{rtset.MXN}: Set parameters for \link{s.MXN}
+#' `rtset.MXN`: Set parameters for [s.MXN]
 #'
 #' @inheritParams s.MXN
 #' @rdname rtset
@@ -402,7 +402,7 @@ rtset.MXN <- function(n.hidden.nodes = NULL,
 } # rtemis::rtset.MXN
 
 
-#' \code{rtset.lincoef}: Set parameters for \link{lincoef}
+#' `rtset.lincoef`: Set parameters for [lincoef]
 #'
 #' @inheritParams lincoef
 #' @rdname rtset
@@ -444,7 +444,7 @@ rtset.lincoef <- function(method = c("glmnet",
 } # rtemis::rtset.lincoef
 
 
-#' \code{rtset.MARS}: Set parameters for \link{s.MARS}
+#' `rtset.MARS`: Set parameters for [s.MARS]
 #'
 #' @inheritParams s.MARS
 #' @rdname rtset

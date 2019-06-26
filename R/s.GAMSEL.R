@@ -4,16 +4,16 @@
 
 #' Regularized Generalized Additive Model (GAMSEL) [C, R]
 #'
-#' Trains a GAMSEL using \code{gamsel::gamsel} and validates it.
+#' Trains a GAMSEL using `gamsel::gamsel` and validates it.
 #' Input will be used to create a formula of the form:
 #' \deqn{y = s(x_{1}, k) + s(x_{2}, k) + ... + s(x_{n}, k)}
 #'
 #' @inheritParams s.GLM
 #' @param k Integer. Number of bases for smoothing spline
-#' @param ... Additional arguments to be passed to \code{mgcv::gam}
-#' @return \link{rtMod}
+#' @param ... Additional arguments to be passed to `mgcv::gam`
+#' @return [rtMod]
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

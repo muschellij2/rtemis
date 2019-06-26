@@ -13,12 +13,12 @@ checkpoint.earlyStopping(x, absolute.threshold = NA,
 \arguments{
 \item{x}{Float, vector: Input - this would normally be the loss at each iteration}
 
-\item{absolute.threshold}{Float: If set and the last value of \code{x} is less than or equal to this 
-(if \code{minimize = TRUE}) or greater than or equal to this (if \code{minimize = FALSE}), then return 
+\item{absolute.threshold}{Float: If set and the last value of \code{x} is less than or equal to this
+(if \code{minimize = TRUE}) or greater than or equal to this (if \code{minimize = FALSE}), then return
 \code{stop = TRUE}. See output under Value. Default = NA}
 
 \item{relative.threshold}{Float: If set, checks if the relative change from the first to last value of \code{x}
-exceeds this number. i.e. if set to .9 and \code{minimize = TRUE}, if there is a 90\% drop from \code{x[1]} to 
+exceeds this number. i.e. if set to .9 and \code{minimize = TRUE}, if there is a 90\% drop from \code{x[1]} to
 \code{x[length(x)]}, then the function returns \code{stop = TRUE}. If \code{minimize = FALSE}, then checks if there
 is a 90\% increase, accordingly.}
 

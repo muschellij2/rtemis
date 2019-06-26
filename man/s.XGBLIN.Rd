@@ -28,9 +28,9 @@ Columns must correspond to columns in \code{x}}
 over \code{ipw}, therefore set \code{weights = NULL} if using \code{ipw}.
 Note: If \code{weight} are provided, \code{ipw} is not used. Leave NULL if setting \code{ipw = TRUE}. Default = NULL}
 
-\item{lambda}{[gS] L2 regularization on weights}
+\item{lambda}{\link{gS} L2 regularization on weights}
 
-\item{alpha}{[gS] L1 regularization on weights}
+\item{alpha}{\link{gS} L1 regularization on weights}
 
 \item{force.nrounds}{Integer: Number of rounds to run if not estimating optimal number by CV}
 
@@ -56,7 +56,7 @@ as well as full model output, if \code{save.mod} is TRUE}
 Train an XGBoost learner with linear boosters
 }
 \details{
-[gS] denotes vector will trigger grid search
+\link{gS} denotes vector will trigger grid search
 Warning: Using \code{nthread > 1} may lower accuracy - test on your data
 }
 \seealso{

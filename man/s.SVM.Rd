@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.SVM.R
 \name{s.SVM}
 \alias{s.SVM}
-\title{Support Vector Machines [C, R]}
+\title{Support Vector Machines \link{C, R}}
 \usage{
 s.SVM(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, grid.resample.rtset = rtset.resample("kfold", 5),
@@ -61,13 +61,13 @@ Default = NULL (random seed)}
 
 \item{kernel}{String: "linear", "polynomial", "radial", "sigmoid"}
 
-\item{degree}{[gS] Integer: Degree for \code{kernel = "polynomial"}. Default = 3}
+\item{degree}{\link{gS} Integer: Degree for \code{kernel = "polynomial"}. Default = 3}
 
-\item{gamma}{[gS] Float: Parameter used in all kernels except \code{linear}}
+\item{gamma}{\link{gS} Float: Parameter used in all kernels except \code{linear}}
 
-\item{coef0}{[gS] Float: Parameter used by kernels \code{polynomial} and \code{sigmoid}}
+\item{coef0}{\link{gS} Float: Parameter used by kernels \code{polynomial} and \code{sigmoid}}
 
-\item{cost}{[gS] Float: Cost of constraints violation; the C constant of the regularization term in the Lagrange
+\item{cost}{\link{gS} Float: Cost of constraints violation; the C constant of the regularization term in the Lagrange
 formulation.}
 
 \item{metric}{String: Metric to minimize, or maximize if \code{maximize = TRUE} during grid search.
@@ -111,7 +111,7 @@ is defined, outdir defaults to \code{paste0("./s.", mod.name)}}
 Train an SVM learner using \code{e1071::svm}
 }
 \details{
-[gS] denotes parameters that will be tuned by cross-validation if more than one value is passed.
+\link{gS} denotes parameters that will be tuned by cross-validation if more than one value is passed.
 Regarding SVM tuning, the following guide from the LIBSVM authors can be useful:
 http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf
 They suggest searching for cost = 2 ^ seq(-5, 15, 2) and

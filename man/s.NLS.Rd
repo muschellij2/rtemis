@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.NLS.R
 \name{s.NLS}
 \alias{s.NLS}
-\title{Nonlinear Least Squares (NLS) [R]}
+\title{Nonlinear Least Squares (NLS) \link{R}}
 \usage{
 s.NLS(x, y = NULL, x.test = NULL, y.test = NULL, formula = NULL,
   weights = NULL, start = NULL, control = nls.control(maxiter = 200),

@@ -163,14 +163,14 @@ If \code{mid = NA}, then only \code{lo} and \code{hi} are used to create the col
 
 \item{minobsinnode}{Integer: Minimum N observations needed in node, before considering splitting}
 
-\item{interaction.depth}{[gS] Integer: Interaction depth}
+\item{interaction.depth}{\link{gS} Integer: Interaction depth}
 
-\item{shrinkage}{[gS] Float: Shrinkage (learning rate)}
+\item{shrinkage}{\link{gS} Float: Shrinkage (learning rate)}
 
-\item{bag.fraction}{[gS] Float (0, 1): Fraction of cases to use to train each tree.
+\item{bag.fraction}{\link{gS} Float (0, 1): Fraction of cases to use to train each tree.
 Helps avoid overfitting. Default = .75}
 
-\item{n.minobsinnode}{[gS] Integer: Minimum number of observation allowed in node}
+\item{n.minobsinnode}{\link{gS} Integer: Minimum number of observation allowed in node}
 
 \item{grid.resample.rtset}{List: Output of \link{rtset.resample} defining \link{gridSearchLearn} parameters.
 Default = \code{rtset.resample("kfold", 5)}}
@@ -187,9 +187,9 @@ Default = NULL (random seed)}
 
 \item{n.trees}{Integer: Initial number of trees to fit}
 
-\item{min.node.size}{[gS] Integer: Minimum node size}
+\item{min.node.size}{\link{gS} Integer: Minimum node size}
 
-\item{mtry}{[gS] Integer: Number of features sampled randomly at each split. Defaults to square root of n of
+\item{mtry}{\link{gS} Integer: Number of features sampled randomly at each split. Defaults to square root of n of
 features for classification, and a third of n of features for regression.}
 
 \item{activation}{String vector: Activation types to use: 'relu', 'sigmoid', 'softrelu', 'tanh'.

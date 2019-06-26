@@ -4,24 +4,24 @@
 
 #' Partitioning Around Medoids with k Estimation
 #'
-#' Estimate PAM clustering solution and optimal k using \code{fpc::pamk}
+#' Estimate PAM clustering solution and optimal k using `fpc::pamk`
 #'
 #' @inheritParams u.KMEANS
 #' @inheritParams u.PAM
 #' @param x Input matrix / data.frame
 #' @param krange Integer vector: Range of k values to try
-#' @param criterion String: Criterion to use for selecting k: "asw", "multiasw" or "ch". See \code{fpc::pamk}
-#' @param usepam Logical: If TRUE, use \code{cluster::pam}, otherwise use \code{cluster::clara}.
+#' @param criterion String: Criterion to use for selecting k: "asw", "multiasw" or "ch". See `fpc::pamk`
+#' @param usepam Logical: If TRUE, use `cluster::pam`, otherwise use `cluster::clara`.
 #' Default = TRUE
 #' @param scaling Logical or Numeric vector: If TRUE, scale input. If numeric vector of length equal to number of
 #' features, the features are divided by the corresponding value. Default = TRUE
-#' @param diss Logical: If TRUE, treat \code{x} as a dissimilarity matrix, otherwise as a matrix of
-#' cases by features. Default = TRUE, if x inherits from class \code{dist}, FALSE otherwise.
+#' @param diss Logical: If TRUE, treat `x` as a dissimilarity matrix, otherwise as a matrix of
+#' cases by features. Default = TRUE, if x inherits from class `dist`, FALSE otherwise.
 #' @param metric String: Dissimilarity metric to be used. Options: 'euclidean', 'manhattan'
-#' @param trace Integer [0, 3]: Trace level for \code{fpc::pamk}
-#' @param ... Additional parameters to be passed to \code{fpc::pamk} and/or \code{cluster::pam}
+#' @param trace Integer [0, 3]: Trace level for `fpc::pamk`
+#' @param ... Additional parameters to be passed to `fpc::pamk` and/or `cluster::pam`
 #' @author Efstathios D. Gennatas
-#' @return \link{rtClust} object
+#' @return [rtClust] object
 #' @family Clustering
 #' @export
 

@@ -4,17 +4,17 @@
 # TODO: Add weights / ipw?
 # TODO: Consider order of L2Norm and BatchNorm
 
-#' Neural Network with \code{mxnet} [C, R]
+#' Neural Network with `mxnet` [C, R]
 #'
-#' Train a Neural Network using \code{mxnet} with optional early stopping
+#' Train a Neural Network using `mxnet` with optional early stopping
 #'
-#' Early stopping is considered after training has taken place for \code{min.epochs} epochs.
+#' Early stopping is considered after training has taken place for `min.epochs` epochs.
 #' After that point, early stopping is controlled by three criteria:
-#' an absolute threshold (\code{early.stop.absolute.threshold}),
-#' a relative threshold (\code{early.stop.relative.threshold}),
-#' or a relative variance across a set number of steps (\code{early.stop.realtiveVariance.threshold} along
-#' \code{early.stop.n.steps}).
-#' Early stopping by default (if you change none of the \code{early.stop} arguments), will look at training error
+#' an absolute threshold (`early.stop.absolute.threshold`),
+#' a relative threshold (`early.stop.relative.threshold`),
+#' or a relative variance across a set number of steps (`early.stop.realtiveVariance.threshold` along
+#' `early.stop.n.steps`).
+#' Early stopping by default (if you change none of the `early.stop` arguments), will look at training error
 #' and stop when the relative variance of the loss over the last 24 steps (classification) or 12 steps (regression)
 #' is lower than 5e-06 (classification) or lower than 5e-03 (regression). To set early stopping OFF, set all
 #' early stopping criteria to NA.
@@ -24,15 +24,15 @@
 #' @inheritParams s.GLM
 #' @param n.hidden.nodes Integer vector: Length must be equal to the number of hidden layers you wish to create
 #' @param activation String vector: Activation types to use: 'relu', 'sigmoid', 'softrelu', 'tanh'.
-#'  If length < n of hidden layers, elements are recycled. See \code{mxnet::mx.symbol.Activation}
+#'  If length < n of hidden layers, elements are recycled. See `mxnet::mx.symbol.Activation`
 #' @param output String: "Logistic" for binary classification, "Softmax" for classification of 2 or more classes,
 #' "Linear" for Regression. Defaults to "Logistic" for binary outcome, "Softmax" for 3+ classes, "LinearReg" for
 #' regression.
 #' @param net MXNET Symbol: provide a previously defined network. logger will not work in this case at the moment,
 #' so early stopping cannot be applied
-#' @param ctx MXNET context: \code{mxnet::mx.cpu()} to use CPU(s). Define N of cores using \code{n.cores} argument.
-#' \code{mxnet::mx.gpu()} to use GPU. For multiple GPUs, provide list like such:
-#' \code{ctx = list(mxnet::mx.gpu(0), mxnet::mx.gpu(1)} to use two GPUs.
+#' @param ctx MXNET context: `mxnet::mx.cpu()` to use CPU(s). Define N of cores using `n.cores` argument.
+#' `mxnet::mx.gpu()` to use GPU. For multiple GPUs, provide list like such:
+#' `ctx = list(mxnet::mx.gpu(0), mxnet::mx.gpu(1)` to use two GPUs.
 #' @param l2.normalization Logical: If TRUE, apply L2 normalization after fully connected step. Default = FALSE
 #' @param batch.normalization Logical: If TRUE, batch normalize before activation. Default = TRUE
 #' @param max.epochs Integer: Number of iterations for training.
@@ -41,12 +41,12 @@
 #' @param dropout.before Integer: Index of hidden layer before which dropout should be applied
 #' @param dropout.after Integer: Index of hidden layer after which dropout should be applied
 #' @param eval.metric String: Metrix used for evaluation during train. Default: "rmse"
-#' @param plot.graphviz Logical: if TRUE, plot the network structure using \code{graphviz}
+#' @param plot.graphviz Logical: if TRUE, plot the network structure using `graphviz`
 #' @param n.cores Integer: Number of cores to use. Caution: Only set to >1 if you're sure MXNET is not using already
 #'   using multiple cores
-#' @param ... Additional parameters to be passed to \code{mxnet::mx.model.FeedForward.create}
+#' @param ... Additional parameters to be passed to `mxnet::mx.model.FeedForward.create`
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Deep Learning
 #' @export

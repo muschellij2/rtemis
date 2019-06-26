@@ -10,10 +10,10 @@
 #' @param ncols Integer: N of columns
 #' @param byrow Logical: If TRUE, draw add plots by row Default = FALSE
 #' @param filename String, optional: Save multiplot to file. Default = NULL
-#' @param pdf.width Float: Width of PDF to save, if \code{filename} is provided.
-#' Default = \code{ncols * 4.5}
-#' #' @param pdf.height Float: Height of PDF to save, if \code{filename} is provided.
-#' Default = \code{nrows * 4.5}
+#' @param pdf.width Float: Width of PDF to save, if `filename` is provided.
+#' Default = `ncols * 4.5`
+#' #' @param pdf.height Float: Height of PDF to save, if `filename` is provided.
+#' Default = `nrows * 4.5`
 #' @author Efstathios D. Gennatas
 #' @export
 

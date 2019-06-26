@@ -51,8 +51,8 @@ length of input (default) or length defined by \code{target.length}.
 }
 \details{
 \code{resample} is used by multiple \pkg{rtemis} learners and functions. Note that option 'kfold', which uses \code{caret::createFolds} results in resamples of slightly
-  different length for y of small length, so avoid all operations which rely on equal-length vectors.
-  For example, you can't place resamples in a data.frame, but must use a list instead.
+different length for y of small length, so avoid all operations which rely on equal-length vectors.
+For example, you can't place resamples in a data.frame, but must use a list instead.
 }
 \seealso{
 \link{elevate}

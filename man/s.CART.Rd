@@ -2,7 +2,7 @@
 % Please edit documentation in R/s.CART.R
 \name{s.CART}
 \alias{s.CART}
-\title{Classification and Regression Trees [C, R, S]}
+\title{Classification and Regression Trees \link{C, R, S}}
 \usage{
 s.CART(x, y = NULL, x.test = NULL, y.test = NULL, x.name = NULL,
   y.name = NULL, weights = NULL, ipw = TRUE, ipw.type = 2,
@@ -59,23 +59,23 @@ Default = NULL (random seed)}
 \item{parms}{List of additional parameters for the splitting function.
 See \code{rpart::rpart("parms")}}
 
-\item{minsplit}{[gS] Integer: Minimum number of cases that must belong in a node before considering a split.
+\item{minsplit}{\link{gS} Integer: Minimum number of cases that must belong in a node before considering a split.
 Default = 2}
 
-\item{minbucket}{[gS] Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
+\item{minbucket}{\link{gS} Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
 
-\item{cp}{[gS] Float: Complexity threshold for allowing a split. Default = .01}
+\item{cp}{\link{gS} Float: Complexity threshold for allowing a split. Default = .01}
 
-\item{maxdepth}{[gS] Integer: Maximum depth of tree. Default = 20}
+\item{maxdepth}{\link{gS} Integer: Maximum depth of tree. Default = 20}
 
 \item{cost}{Vector, Float (> 0): One for each variable in the model.
 See \code{rpart::rpart("cost")}}
 
 \item{model}{Logical: If TRUE, keep a copy of the model. Default = TRUE}
 
-\item{prune.cp}{[gS] Float: Complexity for cost-complexity pruning after tree is built}
+\item{prune.cp}{\link{gS} Float: Complexity for cost-complexity pruning after tree is built}
 
-\item{use.prune.rpart.rt}{[Testing only, do not change]}
+\item{use.prune.rpart.rt}{\link{Testing only, do not change}}
 
 \item{return.unpruned}{Logical: If TRUE and \code{prune.cp} is set, return unpruned tree under \code{extra}
 in \link{rtMod}}
@@ -130,7 +130,7 @@ Object of class \link{rtMod}
 Train a CART for regression or classification using \code{rpart}
 }
 \details{
-[gS] indicates grid search will be performed automatically if more than one value is passed
+\link{gS} indicates grid search will be performed automatically if more than one value is passed
 }
 \seealso{
 \link{elevate} for external cross-validation

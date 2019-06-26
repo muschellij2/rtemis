@@ -35,7 +35,7 @@ If set to 0, \code{th} determines eigenvalue below which PCs are ignored}
 }
 \description{
 Perform sparse and/or non-negative PCA or cumulative PCA decomposition
-  using \code{nsprcomp::nsprcomp} or \code{nsprcomp::nscumcomp} respectively
+using \code{nsprcomp::nsprcomp} or \code{nsprcomp::nscumcomp} respectively
 }
 \details{
 Project scaled variables to sparse and/or non-negative PCA components.

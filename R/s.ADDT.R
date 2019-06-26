@@ -39,11 +39,11 @@
 #'
 #' @inheritParams s.GLM
 #' @param max.depth Integer: Max depth of additive tree
-#' @param init Initial value. Default = \code{mean(y)}
-#' @param lambda Float: lambda parameter for \code{MASS::lm.ridge} Default = .01
+#' @param init Initial value. Default = `mean(y)`
+#' @param lambda Float: lambda parameter for `MASS::lm.ridge` Default = .01
 #' @param minobsinnode Integer: Minimum N observations needed in node, before considering splitting
 #' @param part.max.depth Integer: Max depth for each tree model within the additive tree
-#' @param cxrcoef Logical: Passed to \link{predict.addTree}, if TRUE, returns cases by coefficients matrix.
+#' @param cxrcoef Logical: Passed to [predict.addTree], if TRUE, returns cases by coefficients matrix.
 #' Default = FALSE
 #' @author Efstathios D. Gennatas
 #' @export
@@ -622,7 +622,7 @@ partLin <- function(x1, y1,
 } # rtemis::partLin
 
 
-#' Print method for \code{addTree} object
+#' Print method for `addTree` object
 #'
 #' @method print addTree
 #' @author Efstathios D. Gennatas
@@ -657,12 +657,12 @@ preorderMatch.addt <- function(node, x, trace = 0) {
 } # rtemis::preorderMatch.addt
 
 
-#' Predict method for \code{addTree} object
+#' Predict method for `addTree` object
 #'
 #' @method predict addTree
-#' @param object an \link{rtMod} trained with \link{s.ADDT} or an \code{addTree} object
+#' @param object an [rtMod] trained with [s.ADDT] or an `addTree` object
 #' @param newdata data frame of predictor features
-#' @param learning.rate Float: learning rate if \code{object} was \code{addTree}
+#' @param learning.rate Float: learning rate if `object` was `addTree`
 #' @param n.feat Integer: internal use only
 #' @param verbose Logical: If TRUE, print messages to console. Default = FALSE
 #' @param cxrcoef Logical: If TRUE, return matrix of cases by coefficients along with predictions. Default = FALSE
@@ -716,7 +716,7 @@ predict.addTree <- function(object, newdata = NULL,
 
 #' Extract coefficients from Additive Tree leaves
 #'
-#' @param object \code{addTree} object
+#' @param object `addTree` object
 #' @param newdata matrix/data.frame of features
 #' @param verbose Logical: If TRUE, print output to console
 #' @param trace Integer {0:2} Increase verbosity
@@ -778,7 +778,7 @@ preorder.addt <- function(node, x, trace = 0) {
 
 #' Extract coefficients from Additive Tree leaves
 #'
-#' @param object \code{addTree} object
+#' @param object `addTree` object
 #' @param newdata matrix/data.frame of features
 #' @param verbose Logical: If TRUE, print output to console
 #' @param trace Integer {0:2} Increase verbosity

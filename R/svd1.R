@@ -2,7 +2,7 @@
 # ::rtemis::
 # 2015 Efstathios D. Gennatas egenn.github.io
 
-#' \code{rtemis-internals} Project Variables to First Eigenvector
+#' `rtemis-internals` Project Variables to First Eigenvector
 #'
 #' Convenience function for SVD k = 1
 #'

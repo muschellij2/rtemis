@@ -4,12 +4,12 @@
 
 #' Quadratic Discriminant Analysis [C]
 #'
-#' Train a QDA Classifier using \code{MASS::qda}
+#' Train a QDA Classifier using `MASS::qda`
 #'
 #' @inheritParams s.GLM
-#' @return \link{rtMod} object
+#' @return [rtMod] object
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

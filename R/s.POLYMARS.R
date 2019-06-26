@@ -5,17 +5,17 @@
 
 #' Multivariate adaptive polynomial spline regression (POLYMARS) [C, R]
 #'
-#' Trains a POLYMARS model using \code{polspline::polymars} and validates it
+#' Trains a POLYMARS model using `polspline::polymars` and validates it
 #'
 #' @param x Numeric vector or matrix of features, i.e. independent variables
 #' @param y Numeric vector of outcome, i.e. dependent variable
 #' @param x.test (Optional) Numeric vector or matrix of validation set features
-#'   must have set of columns as \code{x}
+#'   must have set of columns as `x`
 #' @param y.test (Optional) Numeric vector of validation set outcomes
-#' @param ... Additional parameters to pass to \code{polspline::polymars}
-#' @return Object of class \link{rtMod}
+#' @param ... Additional parameters to pass to `polspline::polymars`
+#' @return Object of class [rtMod]
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @export
 

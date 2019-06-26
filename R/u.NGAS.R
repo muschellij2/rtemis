@@ -4,15 +4,15 @@
 
 #' Neural Gas Clustering
 #'
-#' Perform Neural Gas clustering using \code{flexclust::cclust}
+#' Perform Neural Gas clustering using `flexclust::cclust`
 #'
 #' @inheritParams u.KMEANS
 #' @param x Input matrix / data.frame
 #' @param k Integer: Number of clusters to get
 #' @param dist String: Distance measure to use: 'euclidean' or 'manhattan'
-#' @param ... Additional parameters to be passed to \code{flexclust::cclust}
+#' @param ... Additional parameters to be passed to `flexclust::cclust`
 #' @author Efstathios D. Gennatas
-#' @return \link{rtClust} object
+#' @return [rtClust] object
 #' @family Clustering
 #' @export
 

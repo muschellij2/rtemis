@@ -9,8 +9,8 @@
 #' @param dotsToSpaces Logical: If TRUE, convert dots to spaces. Default = TRUE
 #' @param toTitleCase Logical: If TRUE, convert to Title Case. Default = TRUE
 #' @param capitalize.strings String, vector: Always capitalize these strings, if present. Default = "id"
-#' @param stringsToSpaces String, vector: Replace these strings with spaces. Escape as needed for \code{gsub}.
-#' Default = "\\$", which formats common input of the type \code{data.frame$variable}
+#' @param stringsToSpaces String, vector: Replace these strings with spaces. Escape as needed for `gsub`.
+#' Default = "\\$", which formats common input of the type `data.frame$variable`
 #'
 #' @author Efstathios D. Gennatas
 #' @export

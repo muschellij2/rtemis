@@ -8,7 +8,7 @@
 #'
 #' The main differences between a linear model and TLS is that the latter assumes error in the features as well as
 #' the outcome. The solution is essentially the projection on the first principal axis.
-#' Because there is no model, \code{predict} and other methods are not currently working with \code{s.TLS}
+#' Because there is no model, `predict` and other methods are not currently working with `s.TLS`
 #' These features may be added in the future
 #' @inheritParams s.GLM
 #' @author Efstathios D. Gennatas
@@ -140,7 +140,7 @@ s.TLS <- function(x, y = NULL,
 } # rtemis::s.TLS
 
 
-#' \code{predict.rtTLS}: \code{predict} method for \code{rtTLS} object
+#' `predict.rtTLS`: `predict` method for `rtTLS` object
 #'
 #' @method predict rtTLS
 #' @rdname rtTLS-methods
@@ -152,7 +152,7 @@ predict.rtTLS <- function(object, newdata, ...) {
 } # rtemis::precit.rtTLS
 
 
-#' \code{print.rtTLS}: \code{print} method for \code{rtTLS} object
+#' `print.rtTLS`: `print` method for `rtTLS` object
 #'
 #' @method print rtTLS
 #' @rdname rtTLS-methods

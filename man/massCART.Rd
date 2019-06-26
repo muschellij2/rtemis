@@ -27,14 +27,14 @@ Columns must correspond to columns in \code{x}}
 Default = NULL, which results in "Balanced Accuracy" for Classification,
 "MSE" for Regression, and "Coherence" for Survival Analysis.}
 
-\item{minsplit}{[gS] Integer: Minimum number of cases that must belong in a node before considering a split.
+\item{minsplit}{\link{gS} Integer: Minimum number of cases that must belong in a node before considering a split.
 Default = 2}
 
-\item{minbucket}{[gS] Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
+\item{minbucket}{\link{gS} Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)}
 
-\item{cp}{[gS] Float: Complexity threshold for allowing a split. Default = .01}
+\item{cp}{\link{gS} Float: Complexity threshold for allowing a split. Default = .01}
 
-\item{maxdepth}{[gS] Integer: Maximum depth of tree. Default = 20}
+\item{maxdepth}{\link{gS} Integer: Maximum depth of tree. Default = 20}
 
 \item{ipw}{Logical: If TRUE, apply inverse probability weighting (for Classification only).
 Note: If \code{weights} are provided, \code{ipw} is not used. Default = TRUE}

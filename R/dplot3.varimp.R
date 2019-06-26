@@ -2,9 +2,9 @@
 # ::rtemis::
 # 2017 Efstathios D. Gennatas egenn.github.io
 
-#' Plot variable importance using \code{plotly}
+#' Plot variable importance using `plotly`
 #' 
-#' A simple \code{plotly} wrapper to plot horizontal barplots, sorted by value, which can be used
+#' A simple `plotly` wrapper to plot horizontal barplots, sorted by value, which can be used
 #' to visualized variable importance, model coefficients, etc.
 #' @inheritParams mplot3.xy
 #' @param varimp Vector, float: Variable importance of features
@@ -17,7 +17,7 @@
 #' @param font.size Integer: Overall font size to use (essentially for the title at this point).
 #' Default = 14
 #' @param axis.font.size Integer: Font size to use for axis labels and tick labels
-#' (Seems not to be in same scale as \code{font.size} for some reason. Experiment!)
+#' (Seems not to be in same scale as `font.size` for some reason. Experiment!)
 #' @param font.color Color for all text
 #' @param showlegend Logical: If TRUE, show legend
 #' @author Efstathios D. Gennatas

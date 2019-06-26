@@ -32,7 +32,7 @@ Columns must correspond to columns in \code{x}}
 \item{resid}{Float, vector, length = length(y): Residuals to work on. Do not change unless you know
 what you're doing. Default = NULL, for regular boosting}
 
-\item{boost.obj}{[Internal use]}
+\item{boost.obj}{\link{Internal use}}
 
 \item{mod.params}{Named list of arguments for \link{glmLite}}
 

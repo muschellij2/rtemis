@@ -4,7 +4,7 @@
 
 #' Classification and Regression Trees [C, R, S]
 #'
-#' Train a CART for regression or classification using \code{rpart}
+#' Train a CART for regression or classification using `rpart`
 #'
 #' [gS] indicates grid search will be performed automatically if more than one value is passed
 #' @inheritParams s.GLM
@@ -16,28 +16,28 @@
 #' @param minbucket [gS] Integer: Minimum number of cases allowed in a child node. Default = round(minsplit/3)
 #' @param prune.cp [gS] Float: Complexity for cost-complexity pruning after tree is built
 #' @param use.prune.rpart.rt [Testing only, do not change]
-#' @param return.unpruned Logical: If TRUE and \code{prune.cp} is set, return unpruned tree under \code{extra}
-#' in \link{rtMod}
-#' @param grid.resample.rtset List: Output of \link{rtset.resample} defining \link{gridSearchLearn} parameters.
-#' Default = \code{rtset.resample("kfold", 5)}
+#' @param return.unpruned Logical: If TRUE and `prune.cp` is set, return unpruned tree under `extra`
+#' in [rtMod]
+#' @param grid.resample.rtset List: Output of [rtset.resample] defining [gridSearchLearn] parameters.
+#' Default = `rtset.resample("kfold", 5)`
 #' @param grid.search.type String: Type of grid search to perform: "exhaustive" or "randomized". Default = "exhaustive"
-#' @param grid.randomized.p Float (0, 1): If \code{grid.search.type = "randomized"}, randomly run this proportion of
+#' @param grid.randomized.p Float (0, 1): If `grid.search.type = "randomized"`, randomly run this proportion of
 #' combinations. Default = .1
-#' @param metric String: Metric to minimize, or maximize if \code{maximize = TRUE} during grid search.
+#' @param metric String: Metric to minimize, or maximize if `maximize = TRUE` during grid search.
 #' Default = NULL, which results in "Balanced Accuracy" for Classification,
 #' "MSE" for Regression, and "Coherence" for Survival Analysis.
-#' @param maximize Logical: If TRUE, \code{metric} will be maximized if grid search is run. Default = FALSE
+#' @param maximize Logical: If TRUE, `metric` will be maximized if grid search is run. Default = FALSE
 #' @param parms List of additional parameters for the splitting function.
-#' See \code{rpart::rpart("parms")}
+#' See `rpart::rpart("parms")`
 #' @param cost Vector, Float (> 0): One for each variable in the model.
-#' See \code{rpart::rpart("cost")}
+#' See `rpart::rpart("cost")`
 #' @param model Logical: If TRUE, keep a copy of the model. Default = TRUE
-#' @param grid.verbose Logical: Passed to \link{gridSearchLearn}
+#' @param grid.verbose Logical: Passed to [gridSearchLearn]
 #' @param n.cores Integer: Number of cores to use. Defaults to available cores reported by
-#' \code{future::availableCores()}, unles option \code{rt.cores} is set at the time the library is loaded
-#' @return Object of class \link{rtMod}
+#' `future::availableCores()`, unles option `rt.cores` is set at the time the library is loaded
+#' @return Object of class [rtMod]
 #' @author Efstathios D. Gennatas
-#' @seealso \link{elevate} for external cross-validation
+#' @seealso [elevate] for external cross-validation
 #' @family Supervised Learning
 #' @family Tree-based methods
 #' @family Interpretable models
