@@ -3,7 +3,7 @@
 # 2018-9 Efstathios D. Gennatas MBBS AICSM PhD egenn.github.io
 
 library(rtemis)
-
+suppressWarnings(RNGversion("3.5.0"))
 # Regression Data ====
 x <- rnormmat(50, 2, seed = 2018)
 w <- rnorm(2)

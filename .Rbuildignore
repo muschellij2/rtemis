@@ -4,3 +4,5 @@
 .*~
 .travis.yml
 spark-warehouse
+^README\.Rmd$
+^rtemis\.Rproj$
